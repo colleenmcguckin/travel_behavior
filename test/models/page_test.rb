@@ -14,6 +14,10 @@ class PageTest < ActiveSupport::TestCase
       assert page.position
     end
 
+    it 'has a slug' do
+      assert page.slug
+    end
+
     it 'is valid' do
       assert page.valid?
     end
