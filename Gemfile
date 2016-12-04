@@ -21,6 +21,8 @@ gem 'active_admin-sortable_tree'
 gem 'active_admin_datetimepicker'
 gem 'activeadmin_addons', git: 'https://github.com/havenwood/activeadmin_addons.git'
 
+gem 'friendly_id', '~> 5.1.0'
+
 group :production do
   gem 'puma-heroku'
   gem 'rails_12factor' # Heroku-specific
