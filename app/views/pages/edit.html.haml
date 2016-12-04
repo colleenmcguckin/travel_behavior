@@ -1,0 +1,4 @@
+.container
+  = form_for(:page, url: page_path, html: { method: :patch }) do |f|
+    = f.text_area :content, id: "edit", tabindex: "-1"
+    = f.submit

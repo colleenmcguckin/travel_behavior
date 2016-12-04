@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'hamlit'
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 
 gem 'jbuilder', '~> 2.5'
 
@@ -22,6 +22,7 @@ gem 'active_admin_datetimepicker'
 gem 'activeadmin_addons', git: 'https://github.com/havenwood/activeadmin_addons.git'
 
 gem 'friendly_id', '~> 5.1.0'
+gem 'font-awesome-rails'
 
 group :production do
   gem 'puma-heroku'
