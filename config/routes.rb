@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: 'pages#index'
   resources :pages
   resources :images, only: [:index]
+  resources :documents, only: [:index, :show]
 end
