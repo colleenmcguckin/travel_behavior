@@ -3,7 +3,7 @@ class CreateImages < ActiveRecord::Migration
     create_table :images do |t|
       t.string :title
       t.string :description
-      t.string :pulic_id
+      t.string :public_id
       t.timestamps true
     end
   end

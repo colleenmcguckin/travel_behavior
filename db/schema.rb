@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20161204110343) do
   create_table "images", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
-    t.string   "pulic_id"
+    t.string   "public_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
