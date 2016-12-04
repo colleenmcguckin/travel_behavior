@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :load_page
+  before_action :load_page, except: [:index]
 
   def index
   end
