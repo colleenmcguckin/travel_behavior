@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready $(->
 
-  $('#edit').froalaEditor(
+  $('.edit').froalaEditor(
       toolbarInline: true
       charCounterCount: false
       toolbarButtons: [
