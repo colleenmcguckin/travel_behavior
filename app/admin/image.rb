@@ -1,4 +1,5 @@
 ActiveAdmin.register Image do
+  actions :all, except: [:edit]
 
   permit_params :title, :description, :path
 

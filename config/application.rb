@@ -10,6 +10,7 @@ module TravelBehavior
   class Application < Rails::Application
     # Try loading a YAML file at `./config/env.[environment].yml`, if it exists
     # Kudos to Thomas Fuchs (http://mir.aculo.us) for the initial implementation
+    # Try loading a YAML file at `./config/env.[environment].yml`, if it exists
     def load_env_file(environment = nil)
       path = Rails.root.join("config", "env#{environment.nil? ? '' : '.'+environment}.yml")
       return unless File.exist? path

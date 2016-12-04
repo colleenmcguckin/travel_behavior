@@ -32,7 +32,7 @@ $(document).ready $(->
       inlineStyles:
         'Big Red': 'font-size: 20px; color: red;'
         'Small Blue': 'font-size: 14px; color: blue;'
-      # imageManagerLoadURL: "/articles/pictures.json"
-      # imageManagerLoadMethod: 'GET'
+      imageManagerLoadURL: "/images.json"
+      imageManagerLoadMethod: 'GET'
       )
 )
