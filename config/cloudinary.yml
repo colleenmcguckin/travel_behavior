@@ -1,0 +1,17 @@
+---
+default: &default
+  cloud_name: travelbehavior
+  api_key: '716859311247918'
+  api_secret: <%= ENV['cloudinary_api_secret'] %>
+  enhance_image_tag: true
+  static_image_support: false
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+  static_image_support: true
+
+test:
+  <<: *default

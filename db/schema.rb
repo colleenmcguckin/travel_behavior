@@ -62,6 +62,14 @@ ActiveRecord::Schema.define(version: 20161204110343) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
+  create_table "images", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "public_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "pages", force: :cascade do |t|
     t.string   "title"
     t.integer  "position"

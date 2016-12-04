@@ -27,6 +27,8 @@ gem 'activeadmin-ajax_filter'
 gem 'friendly_id', '~> 5.1.0'
 gem 'font-awesome-rails'
 
+gem 'cloudinary'
+
 group :production do
   gem 'puma-heroku'
   gem 'rails_12factor' # Heroku-specific
