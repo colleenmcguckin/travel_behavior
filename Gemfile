@@ -16,10 +16,13 @@ gem 'hamlit'
 
 gem 'jbuilder', '~> 2.5'
 
+gem 'devise'
+
 gem 'activeadmin', git: 'https://github.com/epitron/activeadmin.git'
 gem 'active_admin-sortable_tree'
 gem 'active_admin_datetimepicker'
 gem 'activeadmin_addons', git: 'https://github.com/havenwood/activeadmin_addons.git'
+gem 'activeadmin-ajax_filter'
 
 gem 'friendly_id', '~> 5.1.0'
 gem 'font-awesome-rails'
