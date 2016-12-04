@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require froala/froala_editor.pkgd.min
 //= require_tree .
