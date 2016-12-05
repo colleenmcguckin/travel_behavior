@@ -26,7 +26,7 @@ ActiveAdmin.register Document do
     def create
       @document = Document.new document_params
 
-      content = Docsplit.extract_text(document_params['pdf'].tempfile.path)
+      content = PDF::Reader.new(document_params['pdf'].tempfile).pages.map{ |page| page.text }
       if @document.update content: content
 
         redirect_to admin_document_path @document
@@ -46,7 +46,7 @@ ActiveAdmin.register Document do
     private
 
     def document_params
-      params.require(:document).permit :title, :category, :pdf, :publication_date
+      params.require(:document).permit :title, :category, :pdf, :publication_date, :content
     end
 
   end
