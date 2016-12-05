@@ -1,4 +1,14 @@
 class DocumentsController < ApplicationController
+
+  def index
+    @documents = Document.all
+    respond_to do |format|
+      format.json do
+        render @documents
+      end
+    end
+  end
+
   def show
     @document = Document.find(params[:id])
 

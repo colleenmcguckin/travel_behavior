@@ -117,6 +117,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    docsplit (0.7.6)
     domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
@@ -327,6 +328,7 @@ DEPENDENCIES
   cloudinary
   coffee-rails (~> 4.2)
   devise
+  docsplit
   faker
   font-awesome-rails
   friendly_id (~> 5.1.0)

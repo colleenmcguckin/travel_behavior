@@ -31,6 +31,7 @@ gem 'cloudinary'
 
 gem 'refile', require: 'refile/rails'
 gem 'refile-postgres'
+gem 'docsplit'
 
 group :production do
   gem 'puma-heroku'
