@@ -5,6 +5,8 @@ class PagesController < ApplicationController
   end
 
   def show
+    @documents = Document.all
+    @pages = Page.all
   end
 
   def edit
