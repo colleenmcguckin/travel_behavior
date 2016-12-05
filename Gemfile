@@ -29,6 +29,10 @@ gem 'font-awesome-rails'
 
 gem 'cloudinary'
 
+gem 'refile', require: 'refile/rails'
+gem 'refile-postgres'
+gem 'pdf-reader'
+
 group :production do
   gem 'puma-heroku'
   gem 'rails_12factor' # Heroku-specific

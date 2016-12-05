@@ -49,6 +49,19 @@ ActiveRecord::Schema.define(version: 20161204233227) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
+  create_table "documents", force: :cascade do |t|
+    t.text     "content"
+    t.string   "category"
+    t.date     "publication_date"
+    t.string   "title"
+    t.string   "pdf_id"
+    t.string   "pdf_filename"
+    t.integer  "pdf_size"
+    t.string   "pdf_content_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false

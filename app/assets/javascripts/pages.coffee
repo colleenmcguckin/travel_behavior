@@ -35,4 +35,8 @@ $(document).ready $(->
       imageManagerLoadURL: "/images.json"
       imageManagerLoadMethod: 'GET'
       )
+
+  $('[contenteditable=true]').mentionsInput(
+    source: '/documents.json'
+    showAtCaret: true)
 )

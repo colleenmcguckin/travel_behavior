@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery/jquery-ui.min
+//= require bootstrap/tether.min
+//= require bootstrap/bootstrap.min
 //= require active_admin
 //= require froala/froala_editor.pkgd.min
-//= require_tree .
+//= require mentions/mentions
+//= require pages

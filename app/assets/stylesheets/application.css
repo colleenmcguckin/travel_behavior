@@ -10,6 +10,45 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap/bootstrap
  *= require font-awesome
  *= require froala/froala_editor.pkgd.min
  */
+
+ .mentions-input {
+     position: relative;
+ }
+
+ .mentions-input .input {
+     overflow: hidden;
+     position: relative;
+ }
+
+ .mentions-input .highlighter {
+     position: absolute;
+     left: 0;
+     right: 0;
+     color: transparent;
+     overflow: hidden;
+     border-style: solid;
+     border-color: transparent;
+ }
+
+ .mentions-input .highlighter-content {
+     position: relative;
+ }
+
+ .mentions-input .highlighter-content strong {
+   font-weight: inherit;
+   background-color: #a3bcea;
+   display: inline;
+   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+ }
+
+ [data-mention] {
+   background-color: #a3bcea;
+   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+ }
+ .c-select {
+     border: 2px solid #ccc;
+ }
