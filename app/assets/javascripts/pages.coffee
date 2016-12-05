@@ -36,9 +36,7 @@ $(document).ready $(->
       imageManagerLoadMethod: 'GET'
       )
 
-  elEditable = $('[contenteditable=true]')
-  elEditable.mentionsInput
-    source: '/documents/index.json'
-    showAtCaret: true
-  return
+  $('[contenteditable=true]').mentionsInput(
+    source: '/documents.json'
+    showAtCaret: true)
 )

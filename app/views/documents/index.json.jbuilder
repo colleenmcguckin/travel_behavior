@@ -1,4 +1,4 @@
 json.array! @documents do |document|
-  json.id   document.id
-  json.name document.title
+  json.value   document.title
+  json.uid "documents/#{document.id}.pdf"
 end

@@ -1,11 +1,9 @@
 class DocumentsController < ApplicationController
 
   def index
-    @documents = Document.all
+    @documents = Document.where("title ILIKE ?", "%#{params[:term]}%")
     respond_to do |format|
-      format.json do
-        render @documents
-      end
+      format.json
     end
   end
 

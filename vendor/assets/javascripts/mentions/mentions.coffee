@@ -387,7 +387,7 @@ class MentionsContenteditable extends MentionsBase
         @_initEvents()
 
     mentionTpl = (mention) ->
-        "<a href=/#{mention.uid}>#{mention.value}</a>"
+        "<a target= _blank href=/#{mention.uid}>#{mention.value}</a>"
 
     insertMention = (mention, pos, suffix) ->
         selection = window.getSelection()

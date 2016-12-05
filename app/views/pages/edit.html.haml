@@ -1,4 +1,6 @@
+
 .container
-  = form_for(:page, url: page_path, html: { method: :patch }) do |f|
-    = f.text_area :content, class: "edit", tabindex: "-1"
-    = f.submit
+  %div.pb-2{:style => "min-height: 300px;"}
+    = form_for(:page, url: page_path, html: { method: :patch }) do |f|
+      = f.text_area :content, class: "edit", tabindex: "-1"
+      = f.submit
