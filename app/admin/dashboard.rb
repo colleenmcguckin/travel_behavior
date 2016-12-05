@@ -60,5 +60,18 @@ ActiveAdmin.register_page "Dashboard" do
         end
       end
     end
+    columns do
+      column do
+        panel 'Managing Projects' do
+          ol do
+            li "Log in as an admin."
+            li "Navigate to the admin project panel."
+            li "Create, edit or delete a project."
+            li "Click the 'Save' button."
+            li 'Projects will populate under their header category on the Projects page.'
+          end
+        end
+      end
+    end
   end # content
 end
