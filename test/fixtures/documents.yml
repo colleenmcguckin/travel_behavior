@@ -1,0 +1,5 @@
+basic:
+  title: People walking
+  category: Publications
+  content: Some content for this document
+  publication_date: <%= Date.today %>
