@@ -3,7 +3,7 @@ class Document < ActiveRecord::Base
 
   attachment :pdf
 
-  validates :title, presence: {message: 'Title the image.'}, on: :create
+  validates :title, presence: {message: 'Title the document.'}, on: :create
   validates :category, presence: {message: 'Pick the category.'}, on: :create
   validates :publication_date, presence: {message: 'Pick the publication date, or today.'}, on: :create
   validates :content, presence: {message: 'Content could not be saved.'}, on: :create
