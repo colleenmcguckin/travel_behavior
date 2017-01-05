@@ -9,4 +9,5 @@
 Page.create_default_records!
 Project.create_default_records!
 Document.create_default_records!
+Update.create_default_records!
 Admin.create!(email: 'admin@admin.com', password: 'password')
