@@ -7,4 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Page.create_default_records!
+Project.create_default_records!
+Document.create_default_records!
 Admin.create!(email: 'admin@admin.com', password: 'password')

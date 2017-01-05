@@ -1,7 +1,9 @@
 class CreateDocuments < ActiveRecord::Migration
   def change
     create_table :documents do |t|
+      t.string   :heading
       t.text     :content
+      t.text     :summary
       t.string   :category
       t.date     :publication_date
       t.string   :title

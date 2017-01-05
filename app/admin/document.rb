@@ -14,6 +14,7 @@ ActiveAdmin.register Document do
 
   form do |f|
     inputs 'Document' do
+      f.input :heading, hint: 'If this is a topic brief, enter the heading it should appear under.'
       f.input :title
       f.input :category, as: :select, collection: Document::CATEGORIES.map(&:titleize)
       f.input :publication_date
