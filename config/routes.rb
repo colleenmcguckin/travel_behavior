@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :pages
   resources :images, only: [:index]
   resources :documents, only: [:index, :show]
+  get '/home', to: 'pages#home'
 end

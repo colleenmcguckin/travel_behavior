@@ -17,9 +17,27 @@
   </head>
   <%= render partial: 'layouts/navbar' %>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
-    <%= link_to 'Sign in', new_admin_session_path %>
+    <footer class="footer m-t-1">
+    </br>
+      <div class="container m-b-1 text-xs-center">
+        <span class="text-muted">
+          &copy; 2017 Travel Behavio Analyst | All Rights Reserved.
+        </span>
+        </br>
+        <span class='text-muted'>
+          No part of any publications or any material on this website
+          may be used in any way, cannot be copied or duplicated  by any means including electronic,
+          without express written permission from this author, Nancy A. McGuckin.
+        </span>
+      </div>
+    </br>
+      <div class="container m-b-1 text-xs-center">
+        <span class="text-muted">
+          Icons made by <a href="http://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+        </span>
+      </div>
+    </footer>
   </body>
+
 </html>

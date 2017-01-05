@@ -52,3 +52,32 @@
  .c-select {
      border: 2px solid #ccc;
  }
+
+ .page-container {
+   background: #F5F5F5;
+   width: 100%;
+   height: 100%;
+ }
+
+  .btn-primary {
+    background: #8ACABD !important;
+    font-size: 32px;
+    border: none !important;
+    margin: 20px;
+  }
+
+  .btn-secondary {
+    background: #2B95BF !important;
+    font-size: 32px;
+    border: none !important;
+    margin: 20px;
+    color: white;
+  }
+
+  .blue-text {
+    color: #2B95BF;
+  }
+
+  .footer {
+    background: #2B95BF !important;
+  }
