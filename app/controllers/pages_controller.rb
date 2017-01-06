@@ -23,6 +23,14 @@ class PagesController < ApplicationController
     @topic_briefs = Document.where(category: 'topic_briefs')
   end
 
+  def search_results
+    search = params[:search]
+    @power_points = Document.where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%").where(category: 'power_points')
+    @publications = Document.where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%").where(category: 'publications')
+    @topic_briefs = Document.where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%").where(category: 'topic_briefs')
+    @projects = Project.where('title ILIKE ? OR description ILIKE ?', "%#{search}%", "%#{search}%")
+  end
+
   private
 
   def load_new_contact_form

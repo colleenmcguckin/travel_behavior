@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get '/publications', to: 'pages#publications'
   get '/topic_briefs', to: 'pages#topic_briefs'
   post '/deliver_contact_form', to: 'contact_form#deliver'
+  get '/search_results', to: 'pages#search_results'
+
 
 end

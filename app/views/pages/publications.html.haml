@@ -20,14 +20,15 @@
     %br
       - @publications.each do |publication|
         .row
-          .panel.panel-default
-            .panel-heading{:style => "background: #8ACABD; color: #fff;"}
-              %h3.panel-title
-                = publication.title
-            .panel-body
-              = publication.summary
-            .panel-footer
-              = link_to "Read More", document_path(publication, :format => 'pdf')
+          .col-md-9.col-md-offset-1
+            .panel.panel-default
+              .panel-heading{:style => "background: #8ACABD; color: #fff;"}
+                %h3.panel-title
+                  = publication.title
+              .panel-body
+                = publication.summary
+              .panel-footer
+                = link_to "Read More", document_path(publication, :format => 'pdf')
     .row
       .container{style: 'width: 70%;'}
         .text-xs-center
