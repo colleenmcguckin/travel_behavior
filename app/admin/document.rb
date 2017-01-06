@@ -1,5 +1,4 @@
 ActiveAdmin.register Document do
-  actions :all, except: [:edit]
 
   permit_params :title, :category, :pdf, :publication_date
 
@@ -9,14 +8,16 @@ ActiveAdmin.register Document do
         link_to doc.title, document_path(doc, format: :pdf), target: '_blank'
       end
       row :title
+      row :heading
+      row('Category') { |doc| doc.category.titleize }
     end
   end
 
   form do |f|
     inputs 'Document' do
-      f.input :heading, hint: 'If this is a topic brief, enter the heading it should appear under.'
+      f.input :heading, hint: 'If this is a topic brief or power point, enter the heading it should appear under.'
       f.input :title
-      f.input :category, as: :select, collection: Document::CATEGORIES.map(&:titleize)
+      f.input :category, as: :select, collection: Document::CATEGORIES
       f.input :publication_date
       f.input :pdf, as: :file
     end

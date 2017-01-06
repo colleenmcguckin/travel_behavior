@@ -81,3 +81,15 @@
   .footer {
     background: #2B95BF !important;
   }
+
+  .btn-wrap-text {
+    white-space: normal !important;
+  }
+/*
+  .btn-power-point {
+    background: #2B95BF !important;
+    font-size: 32px;
+    border: none !important;
+    color: white;
+    margin-bottom: 20px;
+  }*/

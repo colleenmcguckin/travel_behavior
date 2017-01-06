@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/consultant-services', to: 'pages#consultant_services'
   get '/about', to: 'pages#about'
   get '/projects', to: 'pages#projects'
+  get '/publications', to: 'pages#publications'
 
 
 end

@@ -1,5 +1,5 @@
 class Document < ActiveRecord::Base
-  CATEGORIES = %w[projects publications topic_briefs power_points]
+  CATEGORIES = %w[publications topic_briefs power_points]
 
   attachment :pdf
 
@@ -233,6 +233,8 @@ class Document < ActiveRecord::Base
       title: "Pounding the Pavement Looking For Work",
       category: "topic_briefs"
     )
+
+    #### POWER POINTS ####
 
     Document.create(
       publication_date: Date.today,
