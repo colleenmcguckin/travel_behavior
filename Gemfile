@@ -17,6 +17,8 @@ gem 'hamlit'
 gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
+gem 'mail_form'
+gem 'simple_form'
 
 gem 'activeadmin', git: 'https://github.com/epitron/activeadmin.git'
 gem 'active_admin-sortable_tree'

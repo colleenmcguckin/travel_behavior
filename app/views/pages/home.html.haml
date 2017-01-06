@@ -32,7 +32,7 @@
         .text-xs-center
           = link_to 'Topic Briefs', topic_briefs_path, class: 'btn btn-lg btn-primary'
           = link_to 'Publications', publications_path, class: 'btn btn-lg btn-primary'
-          = link_to 'Hire Me!', '', class: 'btn btn-lg btn-secondary'
+          %button.btn.btn-secondary.btn-lg{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"} Hire Me!
           = link_to 'Projects', projects_path, class: 'btn btn-lg btn-primary'
           = link_to 'Power Points', publications_path(anchor: 'power-points'), class: 'btn btn-lg btn-primary'
     %hr.featurette-divider
@@ -102,3 +102,35 @@
             = image_tag('electric-car.svg', width: '70px')
           .col-xs-4
             = image_tag('parking.svg', width: '70px')
+  #contactModal.modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+          %h4.modal-title Confirmation
+        .modal-body
+          %p Do you want to save changes you made to document before closing?
+          %p.text-warning
+            %small If you don't save, your changes will be lost.
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+          %button.btn.btn-primary{:type => "button"} Save changes
+#myModal.modal.fade{:role => "dialog"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"} ×
+        %h4.modal-title Contact Me
+      .modal-body
+        .row
+          = simple_form_for @contact_form, url: deliver_contact_form_path, html: { class: 'form-horizontal' } do |f|
+            .col-lg-8.col-lg-offset-2
+              =f.input :name, required: true, placeholder: 'Your Name'
+            .col-lg-8.col-lg-offset-2
+              =f.input :email, required: true, hint: "I'll email you back at this address.", placeholder: 'Your Email'
+            .col-lg-8.col-lg-offset-2
+              =f.input :message, as: :text, required: true
+            .col-lg-8.col-lg-offset-2
+              =f.button :submit, 'Submit'
+      .modal-footer
+        %button.btn.btn-secondary.btn-sm{"data-dismiss" => "modal", :type => "button"} Close

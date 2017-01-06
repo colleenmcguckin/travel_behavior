@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :load_new_contact_form
 
   def home
   end
@@ -20,6 +21,12 @@ class PagesController < ApplicationController
 
   def topic_briefs
     @topic_briefs = Document.where(category: 'topic_briefs')
+  end
+
+  private
+
+  def load_new_contact_form
+    @contact_form = ContactForm.new
   end
 
 end
