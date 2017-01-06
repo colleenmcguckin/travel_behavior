@@ -32,7 +32,7 @@
         .text-xs-center
           = link_to 'Topic Briefs', topic_briefs_path, class: 'btn btn-lg btn-primary'
           = link_to 'Publications', publications_path, class: 'btn btn-lg btn-primary'
-          %button.btn.btn-secondary.btn-lg{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"} Hire Me!
+          = render partial: 'contact_modal'
           = link_to 'Projects', projects_path, class: 'btn btn-lg btn-primary'
           = link_to 'Power Points', publications_path(anchor: 'power-points'), class: 'btn btn-lg btn-primary'
     %hr.featurette-divider
@@ -115,22 +115,22 @@
         .modal-footer
           %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
           %button.btn.btn-primary{:type => "button"} Save changes
-#myModal.modal.fade{:role => "dialog"}
-  .modal-dialog
-    .modal-content
-      .modal-header
-        %button.close{"data-dismiss" => "modal", :type => "button"} ×
-        %h4.modal-title Contact Me
-      .modal-body
-        .row
-          = simple_form_for @contact_form, url: deliver_contact_form_path, html: { class: 'form-horizontal' } do |f|
-            .col-lg-8.col-lg-offset-2
-              =f.input :name, required: true, placeholder: 'Your Name'
-            .col-lg-8.col-lg-offset-2
-              =f.input :email, required: true, hint: "I'll email you back at this address.", placeholder: 'Your Email'
-            .col-lg-8.col-lg-offset-2
-              =f.input :message, as: :text, required: true
-            .col-lg-8.col-lg-offset-2
-              =f.button :submit, 'Submit'
-      .modal-footer
-        %button.btn.btn-secondary.btn-sm{"data-dismiss" => "modal", :type => "button"} Close
+-# #myModal.modal.fade{:role => "dialog"}
+-#   .modal-dialog
+-#     .modal-content
+-#       .modal-header
+-#         %button.close{"data-dismiss" => "modal", :type => "button"} ×
+-#         %h4.modal-title Contact Me
+-#       .modal-body
+-#         .row
+-#           = simple_form_for @contact_form, url: deliver_contact_form_path, html: { class: 'form-horizontal' } do |f|
+-#             .col-lg-8.col-lg-offset-2
+-#               =f.input :name, required: true, placeholder: 'Your Name'
+-#             .col-lg-8.col-lg-offset-2
+-#               =f.input :email, required: true, hint: "I'll email you back at this address.", placeholder: 'Your Email'
+-#             .col-lg-8.col-lg-offset-2
+-#               =f.input :message, as: :text, required: true
+-#             .col-lg-8.col-lg-offset-2
+-#               =f.button :submit, 'Submit'
+-#       .modal-footer
+-#         %button.btn.btn-secondary.btn-sm{"data-dismiss" => "modal", :type => "button"} Close
