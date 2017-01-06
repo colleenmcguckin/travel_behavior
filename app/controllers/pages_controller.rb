@@ -18,4 +18,8 @@ class PagesController < ApplicationController
     @power_points = Document.where(category: 'power_points')
   end
 
+  def topic_briefs
+    @topic_briefs = Document.where(category: 'topic_briefs')
+  end
+
 end

@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/projects', to: 'pages#projects'
   get '/publications', to: 'pages#publications'
-
+  get '/topic_briefs', to: 'pages#topic_briefs'
 
 end
