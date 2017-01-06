@@ -77,6 +77,16 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gmail.com',
+    user_name:            ENV["GMAIL_USERNAME"],
+    password:             ENV["GMAIL_PASSWORD"],
+    authentication:       :plain,
+    enable_starttls_auto: true
+  }
+
   #TODO figure out if the below needs to be set up:
   # Devise on Heroku
   # config.action_ault_url_options = { host: 'tracking-board.herokuapp.com' }
