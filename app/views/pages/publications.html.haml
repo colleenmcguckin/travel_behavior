@@ -20,7 +20,7 @@
     %br
       - @publications.each do |publication|
         .row
-          .col-md-9.col-md-offset-1
+          .col-md-10.col-md-offset-1
             .panel.panel-default
               .panel-heading{:style => "background: #8ACABD; color: #fff;"}
                 %h3.panel-title
@@ -43,13 +43,19 @@
     %h2.text-center
       Power Points
     %hr.featurette-divider
-    .container{style: 'background: #F5F5F5;'}
-      .row
-      %br
+    %br
+      - @power_points.pluck(:heading).uniq.each do |heading|
         .row
-          - @power_points.each do |power_point|
-            .col-lg-4
-              = link_to "#{power_point.title.titleize}", document_path(power_point, :format => 'pdf'), class: 'btn btn-power-point btn-lg btn-block btn-wrap-text'
+          .col-md-10.col-md-offset-1
+            .panel.panel-default
+              .panel-heading{:style => "background: #2D9DC1; color: #fff;"}
+                %h3.panel-title
+                  = heading.titleize
+              .panel-body
+                %ul
+                  - @power_points.where(heading: heading).each do |power_point|
+                    %li
+                      = link_to "#{power_point.title.titleize}", document_path(power_point, :format => 'pdf')
 
   %hr.featurette-divider
   .row
