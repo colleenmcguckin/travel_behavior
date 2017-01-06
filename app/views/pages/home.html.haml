@@ -30,11 +30,11 @@
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center
-          = link_to 'Topic Briefs', '', class: 'btn btn-lg btn-primary'
-          = link_to 'Publications', '', class: 'btn btn-lg btn-primary'
+          = link_to 'Topic Briefs', topic_briefs_path, class: 'btn btn-lg btn-primary'
+          = link_to 'Publications', publications_path, class: 'btn btn-lg btn-primary'
           = link_to 'Hire Me!', '', class: 'btn btn-lg btn-secondary'
-          = link_to 'Projects', '', class: 'btn btn-lg btn-primary'
-          = link_to 'Power Points', '', class: 'btn btn-lg btn-primary'
+          = link_to 'Projects', projects_path, class: 'btn btn-lg btn-primary'
+          = link_to 'Power Points', publications_path(anchor: 'power-points'), class: 'btn btn-lg btn-primary'
     %hr.featurette-divider
     .row
       .container{style: 'width: 70%;'}

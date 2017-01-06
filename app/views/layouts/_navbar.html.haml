@@ -7,13 +7,23 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#"} Nancy McGuckin
+      = link_to "Nancy McGuckin", home_path, class: 'navbar-brand'
+
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
-        - Page.find_each do |page|
-          %li
-            = link_to "#{page.title.titleize}", page
+        %li
+          = link_to 'Home', home_path
+        %li
+          = link_to "Topic Briefs", topic_briefs_path
+        %li
+          = link_to "Projects", projects_path
+        %li
+          = link_to "Publications", publications_path
+        %li
+          = link_to "Consultant Services", consultant_services_path
+        %li
+          = link_to "About Me", about_path
       %form.navbar-form.navbar-right
         .form-group
           %input.form-control{:placeholder => "Search", :type => "text"}/
