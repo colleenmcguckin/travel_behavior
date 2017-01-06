@@ -27,5 +27,7 @@ module TravelBehavior
     # free to tweak for your local development setup. Any values defined here
     # overwrite the defaults in `env.yml`
     load_env_file(Rails.env)
+
+    config.assets.initialize_on_precompile = false
   end
 end
