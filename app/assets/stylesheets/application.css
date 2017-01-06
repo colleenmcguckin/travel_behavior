@@ -15,6 +15,10 @@
  *= require froala/froala_editor.pkgd.min
  */
 
+  @-ms-viewport       { width: device-width; }
+  @-o-viewport        { width: device-width; }
+  @viewport           { width: device-width; }
+
  .mentions-input {
      position: relative;
  }
