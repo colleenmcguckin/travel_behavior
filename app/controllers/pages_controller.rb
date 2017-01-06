@@ -8,4 +8,9 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def projects
+    @projects = Project.all
+  end
+
 end
