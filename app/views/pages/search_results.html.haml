@@ -27,10 +27,13 @@
             .panel-body
               .row
               .col-md-9
-                %ul
-                  - @topic_briefs.each do |topic_brief|
-                    %li
-                      = link_to "#{topic_brief.title.titleize} - (#{topic_brief.heading&.titleize})", document_path(topic_brief, :format => 'pdf')
+                - if @topic_briefs.any?
+                  %ul
+                    - @topic_briefs.each do |topic_brief|
+                      %li
+                        = link_to "#{topic_brief.title.titleize} - (#{topic_brief.heading&.titleize})", document_path(topic_brief, :format => 'pdf')
+                - else
+                  No results found
               .col-md-3
                 = link_to 'See All Topic Briefs', topic_briefs_path, class: 'btn btn-sm btn-secondary'
     %hr.featurette-divider
@@ -44,10 +47,13 @@
             .panel-body
               .row
               .col-md-9
-                %ul
-                  - @publications.each do |publication|
-                    %li
-                      = link_to "#{publication.title.titleize}", document_path(publication, :format => 'pdf')
+                - if @publications.any?
+                  %ul
+                    - @publications.each do |publication|
+                      %li
+                        = link_to "#{publication.title.titleize}", document_path(publication, :format => 'pdf')
+                - else
+                  No results found
               .col-md-3
                 = link_to 'See All Publications', publications_path, class: 'btn btn-sm btn-secondary'
     %hr.featurette-divider
@@ -61,10 +67,13 @@
             .panel-body
               .row
               .col-md-9
-                %ul
-                  - @power_points.each do |power_point|
-                    %li
-                      = link_to "#{power_point.title.titleize} - (#{power_point.heading&.titleize})", document_path(power_point, :format => 'pdf')
+                - if @power_points.any?
+                  %ul
+                    - @power_points.each do |power_point|
+                      %li
+                        = link_to "#{power_point.title.titleize} - (#{power_point.heading&.titleize})", document_path(power_point, :format => 'pdf')
+                - else
+                  No results found
               .col-md-3
                 = link_to 'See All Power Points',  publications_path(anchor: 'power-points'), class: 'btn btn-sm btn-secondary'
     %hr.featurette-divider
@@ -78,10 +87,13 @@
             .panel-body
               .row
               .col-md-9
-                %ul
-                  - @projects.each do |project|
-                    %li
-                      = link_to "#{project.title.titleize} - (#{project.category&.titleize})", document_path(project, :format => 'pdf')
+                - if @projects.any?
+                  %ul
+                    - @projects.each do |project|
+                      %li
+                        = link_to "#{project.title.titleize} - (#{project.category&.titleize})", document_path(project, :format => 'pdf')
+                - else
+                  No results found
               .col-md-3
                 = link_to 'See All Projects', projects_path, class: 'btn btn-sm btn-secondary'
     .row
