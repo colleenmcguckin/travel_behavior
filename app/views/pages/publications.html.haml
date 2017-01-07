@@ -1,78 +1,60 @@
 %section{style: "margin-top: -20px"}
-  .jumbotron{:style => "background: url(#{asset_url 'pattern.svg'}) no-repeat center center; "}
-    .container.text-xs-center
-      %h1.display-3{:style => ""} Publications
+  .jumbotron.img-responsive{:style => "background: url(#{asset_url 'pedestrians.jpeg'}) no-repeat center center; background-size: cover; opacity: 1; "}
+    .container.text-xs-center.text-white
+      %h1.display-3{:style => ""} Projects
       %p.lead{:style => "text-transform: uppercase;"} Expertise in the Interpretation and Forecasting of Travel
       %br
 %section{style: "margin-top: -30px;"}
-  .container{width: '70%'}
-    %br
-    .row
-      .container{style: 'width: 70%;'}
-        .text-xs-center
-          .col-xs-4
-            = image_tag('taxi.svg', width: '70px')
-          .col-xs-4
-            = image_tag('bicycle.svg', width: '70px')
-          .col-xs-4
-            = image_tag('bus.svg', width: '70px')
+  .page-container
+    %p{style: "margin-left: 60px; margin-right: 60px; margin-top: 20px; margin-bottom: 20px;"}
     %hr.featurette-divider
     %br
-      - @publications.each do |publication|
-        .row
-          .col-md-10.col-md-offset-1
-            .panel.panel-default
-              .panel-heading{:style => "background: #8ACABD; color: #fff;"}
-                %h3.panel-title
-                  = publication.title
-              .panel-body
-                = publication.summary
-              .panel-footer
-                = link_to "Read More", document_path(publication, :format => 'pdf')
+    %h2.text-center
+      Publications
+    %br
     .row
-      .container{style: 'width: 70%;'}
-        .text-xs-center
-          .col-xs-4
-            = image_tag('traffic-light.svg', width: '70px')
-          .col-xs-4
-            = image_tag('school-bus.svg', width: '70px')
-          .col-xs-4
-            = image_tag('airplane.svg', width: '70px')
+      .col-xs-10.col-xs-offset-1
+        #accordion.panel-group
+          - @publications.each_with_index do |publication, index|
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#category_#{index}"}
+                    = publication.title
+              .panel-collapse.collapse{:id => "category_#{index}"}
+                .panel-body{style: 'color: black;'}
+                  = publication.summary
+                .panel-footer
+                  = link_to "#{publication.title}", document_path(publication, :format => 'pdf')
+    %hr.featurette-divider
     %br
     %a{name: 'power-points'}
     %h2.text-center
-      Power Points
-    %hr.featurette-divider
+      Presentations
     %br
-      - @power_points.pluck(:heading).uniq.each do |heading|
-        .row
-          .col-md-10.col-md-offset-1
-            .panel.panel-default
-              .panel-heading{:style => "background: #2D9DC1; color: #fff;"}
-                %h3.panel-title
-                  = heading.titleize
-              .panel-body
-                %ul
-                  - @power_points.where(heading: heading).each do |power_point|
-                    %li
-                      = link_to "#{power_point.title.titleize}", document_path(power_point, :format => 'pdf')
+      .row
+        .col-xs-10.col-xs-offset-1
+          #accordion.panel-group
+            - @power_points.pluck(:heading).uniq.each_with_index do |heading, index|
+              .panel.panel-default
+                .panel-heading
+                  %h4.panel-title
+                    %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#heading_#{index}"}
+                      = heading.titleize
+                .panel-collapse.collapse{:id => "heading_#{index}"}
+                  .panel-body
+                    %ul
+                      - @power_points.where(heading: heading).each do |power_point|
+                        %li
+                          = link_to "#{power_point.title}", document_path(power_point, :format => 'pdf')
 
-  %hr.featurette-divider
-  .row
-    .container{style: 'width: 70%;'}
-      .text-xs-center
-        %h3
-          Let's Work Together!
-  .row
-    .container{style: 'width: 70%; margin-bottom: 20px;'}
-      .text-xs-center
-        = render partial: 'contact_modal'
-  .row
-    .container{style: 'width: 70%;'}
-      .text-xs-center
-        .col-xs-4
-          = image_tag('luggage.svg', width: '70px')
-        .col-xs-4
-          = image_tag('electric-car.svg', width: '70px')
-        .col-xs-4
-          = image_tag('parking.svg', width: '70px')
+    %hr.featurette-divider
+    .row
+      .container{style: 'width: 70%;'}
+        .text-xs-center{style: 'color: black;'}
+          %h3
+            Let's Work Together!
+    .row
+      .container{style: 'width: 70%; margin-bottom: 20px;'}
+        .text-xs-center
+          = render partial: 'contact_modal'

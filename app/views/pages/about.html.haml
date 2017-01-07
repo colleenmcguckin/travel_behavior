@@ -1,24 +1,14 @@
 %section{style: "margin-top: -20px"}
-  .jumbotron{:style => "background: url(#{asset_url 'pattern.svg'}) no-repeat center center; "}
-    .container.text-xs-center
+  .jumbotron.img-responsive{:style => "background: url(#{asset_url 'cyclists.jpeg'}) no-repeat center center; background-size: cover; opacity: 1; "}
+    .container.text-xs-center.text-white
       %h1.display-3{:style => ""} About Me
       %p.lead{:style => "text-transform: uppercase;"} Expertise in the Interpretation and Forecasting of Travel
       %br
 %section{style: "margin-top: -30px;"}
-  .container{width: '70%'}
+  .page-container
     %br
     .row
-      .container{style: 'width: 70%;'}
-        .text-xs-center
-          .col-xs-4
-            = image_tag('taxi.svg', width: '70px')
-          .col-xs-4
-            = image_tag('bicycle.svg', width: '70px')
-          .col-xs-4
-            = image_tag('bus.svg', width: '70px')
-    .row
       .col-md-2.col-md-offset-1
-        %br
         %br
         = image_tag('headshot.jpg', alt: 'Portrait of Nancy McGuckin', class: 'img-responsive', height: '200', width: '200')
       .col-md-8
@@ -32,13 +22,14 @@
           %br
           %br
           She specializes in social and demographic indicators of travel demand, and integrates data from safety, health, economic, energy, time-use, and other pertinent sources to develop the context for planning and policy initiatives.
+      %br
     %br
     .row
       .col-md-10.col-md-offset-1
         .panel.panel-default
-          .panel-heading{:style => "background: #8ACABD; color: #fff;"}
+          .panel-heading
             %h3.panel-title Experience
-          .panel-body
+          .panel-body{style: 'color: black;'}
             %h4 Summary
             %p
               Ms. McGuckin is a nationally recognized expert in travel behavior and a senior advisor to Federal, State, and local public agencies, policy and advocate groups, other consultant groups, and private clients.  She draws insightful and meaningful information from complex and disparate data sources and designs and assesses primary data collection efforts related to travel behavior.  She helps develop robust performance measures for area-wide policies related to emissions, health, and mobility and formulates methods of tracking those metrics. She creates critical information out of data for decision makers, transportation planners, and travel demand forecasters.
@@ -68,32 +59,13 @@
               %li TRB Committee on Urban Data and Information Systems (ABJ30)
               %li Center for Disease Control Expert Panel on Active Transportation (since 2011)
               %li The Transportation Statistics Interest Group (coordinated by the Bureau of Transportation Statistics and the American Statistical Association)
-    .row
-      .container{style: 'width: 70%;'}
-        .text-xs-center
-          .col-xs-4
-            = image_tag('traffic-light.svg', width: '70px')
-          .col-xs-4
-            = image_tag('school-bus.svg', width: '70px')
-          .col-xs-4
-            = image_tag('airplane.svg', width: '70px')
-    %br
     %br
     .row
       .container{style: 'width: 70%;'}
         .text-xs-center
-          %h3
+          %h3{style: 'color: black;'}
             Let's Work Together!
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center
           = render partial: 'contact_modal'
-    .row
-      .container{style: 'width: 70%;'}
-        .text-xs-center
-          .col-xs-4
-            = image_tag('luggage.svg', width: '70px')
-          .col-xs-4
-            = image_tag('electric-car.svg', width: '70px')
-          .col-xs-4
-            = image_tag('parking.svg', width: '70px')
