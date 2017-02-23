@@ -1,7 +1,7 @@
 %section{style: "margin-top: -20px"}
-  .jumbotron.img-responsive{:style => "background: url(#{asset_url 'pedestrians.jpeg'}) no-repeat center center; background-size: cover; opacity: 1; "}
+  .jumbotron.img-responsive{:style => "background: url(#{asset_url 'IMG_1372.JPG'}) no-repeat center center; background-size: cover; opacity: 1; "}
     .container.text-xs-center.text-white
-      %h1.display-3{:style => ""} Projects
+      %h1.display-3{:style => ""} Publications
       %p.lead{:style => "text-transform: uppercase;"} Expertise in the Interpretation and Forecasting of Travel
       %br
 %section{style: "margin-top: -30px;"}
@@ -9,6 +9,28 @@
     %p{style: "margin-left: 60px; margin-right: 60px; margin-top: 20px; margin-bottom: 20px;"}
     %hr.featurette-divider
     %br
+    %a{name: 'power-points'}
+    %h2.text-center
+      Power Points & Infographics
+    %br
+      .row
+        .col-xs-10.col-xs-offset-1
+          #accordion.panel-group
+            - @power_points.pluck(:heading).uniq.each_with_index do |heading, index|
+              .panel.panel-default
+                .panel-heading
+                  %h4.panel-title
+                    %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#heading_#{index}"}
+                      = heading.titleize
+                .panel-collapse.collapse{:id => "heading_#{index}"}
+                  .panel-body
+                    %ul
+                      - @power_points.where(heading: heading).each do |power_point|
+                        %li
+                          = link_to "#{power_point.title}", document_path(power_point, :format => 'pdf')
+    %hr.featurette-divider
+    %br
+    %a{name: 'publications'}
     %h2.text-center
       Publications
     %br
@@ -26,27 +48,6 @@
                   = publication.summary
                 .panel-footer
                   = link_to "#{publication.title}", document_path(publication, :format => 'pdf')
-    %hr.featurette-divider
-    %br
-    %a{name: 'power-points'}
-    %h2.text-center
-      Presentations
-    %br
-      .row
-        .col-xs-10.col-xs-offset-1
-          #accordion.panel-group
-            - @power_points.pluck(:heading).uniq.each_with_index do |heading, index|
-              .panel.panel-default
-                .panel-heading
-                  %h4.panel-title
-                    %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#heading_#{index}"}
-                      = heading.titleize
-                .panel-collapse.collapse{:id => "heading_#{index}"}
-                  .panel-body
-                    %ul
-                      - @power_points.where(heading: heading).each do |power_point|
-                        %li
-                          = link_to "#{power_point.title}", document_path(power_point, :format => 'pdf')
 
     %hr.featurette-divider
     .row

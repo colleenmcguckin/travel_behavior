@@ -17,48 +17,71 @@
       .container{style: 'width: 70%;'}
         .text-xs-center
           %h3
+            Explore:
+    .row
+      .container{style: 'width: 70%; margin-bottom: 20px;'}
+        .text-xs-center
+          = link_to 'Topic Briefs', topic_briefs_path, class: 'btn btn-lg btn-secondary'
+          = link_to 'Publications', publications_path, class: 'btn btn-lg btn-secondary'
+          = render partial: 'contact_modal'
+          = link_to 'Projects', projects_path, class: 'btn btn-lg btn-secondary'
+          = link_to 'Power Points', publications_path(anchor: 'publications'), class: 'btn btn-lg btn-secondary'
+    %hr.featurette-divider
+    .row
+      .container{style: 'width: 90%;'}
+        .text-xs-center
+          %h3
             Select Clients:
         .row
-          .container{style: 'width: 70%; margin-top: 20px;'}
-            .text-xs-center
-              .col-xs-3
-                = image_tag('triple-a.png', width: '175px', class: 'img-responsive')
-              .col-xs-3
-                = image_tag('AASHTO_logo.gif', width: '175px', class: 'img-responsive')
-              .col-xs-3
-                = image_tag('activelivingresearch.png', width: '175px', class: 'img-responsive')
-              .col-xs-3
-                = image_tag('aarp-logo-print.png', width: '175px', class: 'img-responsive')
-        .row
-          .container{style: 'width: 70%; margin-top: 20px;'}
-            .text-xs-center
-              .col-xs-3
-                = image_tag('caltrans.png', width: '175px', class: 'img-responsive')
-              .col-xs-3
-                = image_tag('nymtc.png', width: '175px', class: 'img-responsive')
-              .col-xs-3
-                = image_tag('safe-routes.png', width: '175px', class: 'img-responsive')
-              .col-xs-3
-                = image_tag('rand.png', width: '175px', class: 'img-responsive')
-
-        .row
-          .container{style: 'width: 70%; margin-top: 20px;'}
-            .text-xs-center
-              .col-xs-3
-                = image_tag('national-academies.jpg', width: '175px', class: 'img-responsive')
-              .col-xs-3
-                = image_tag('fha.png', width: '175px', class: 'img-responsive')
-              .col-xs-3
-                = image_tag('NYSDOT.png', width: '175px', class: 'img-responsive')
-              .col-xs-3
-                = image_tag('tti.png', width: '175px', class: 'img-responsive')
-        .row
-          .container{style: 'width: 70%; margin-top: 20px; margin-bottom: 20px;'}
+          .container{style: 'width: 100%; margin-top: 20px;'}
             .text-xs-center
               .col-xs-3.col-xs-offset-3
-                = image_tag('tcrp.png', width: '175px', class: 'img-responsive')
+                = image_tag('triple-a.png', width: '70%', class: 'img-responsive')
               .col-xs-3
-                = image_tag('pasadena.png', width: '175px', class: 'img-responsive')
+                = image_tag('AASHTO_logo.gif', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('activelivingresearch.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('aarp-logo-print.png', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('caltrans.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('nymtc.png', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('safe-routes.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('rand.png', width: '60%', class: 'img-responsive')
+
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('NYSDOT.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('fha.png', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('national-academies.jpg', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('tti.png', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px; margin-bottom: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('tcrp.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('pasadena.png', width: '60%', class: 'img-responsive')
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center
