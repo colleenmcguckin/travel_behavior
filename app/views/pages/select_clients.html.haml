@@ -1,0 +1,65 @@
+%section{style: "margin-top: -20px"}
+  .jumbotron.img-responsive{:style => "background: url(#{asset_url 'james-padolsey-152010'}) no-repeat center center; background-size: cover; opacity: 1; "}
+    .container.text-xs-center.text-white
+      %h1.display-3{:style => ""} Select Clients
+      %p.lead{:style => "text-transform: uppercase;"} Expertise in the Interpretation and Forecasting of Travel
+      %br
+%section{style: "margin-top: -30px;"}
+  .page-container
+    .row
+      .container{style: 'width: 90%;'}
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('triple-a.png', width: '70%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('AASHTO_logo.gif', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('activelivingresearch.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('aarp-logo-print.png', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('caltrans.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('nymtc.png', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('safe-routes.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('rand.png', width: '60%', class: 'img-responsive')
+
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('NYSDOT.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('fha.png', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('national-academies.jpg', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('tti.png', width: '80%', class: 'img-responsive')
+        .row
+          .container{style: 'width: 100%; margin-top: 20px; margin-bottom: 20px;'}
+            .text-xs-center
+              .col-xs-3.col-xs-offset-3
+                = image_tag('tcrp.png', width: '80%', class: 'img-responsive')
+              .col-xs-3
+                = image_tag('pasadena.png', width: '60%', class: 'img-responsive')
+        %hr.featurette-divider
+        .row
+          .container{style: 'width: 70%; margin-bottom: 20px;'}
+            .text-xs-center
+              = render partial: 'contact_modal'

@@ -23,6 +23,9 @@ class PagesController < ApplicationController
     @topic_briefs = Document.where(category: 'topic_briefs')
   end
 
+  def select_clients
+  end
+
   def search_results
     search = params[:search]
     @search_term = search

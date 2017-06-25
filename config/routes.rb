@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/topic_briefs', to: 'pages#topic_briefs'
   post '/deliver_contact_form', to: 'contact_form#deliver'
   get '/search_results', to: 'pages#search_results'
+  get '/select_clients', to: 'pages#select_clients'
 
 
 end

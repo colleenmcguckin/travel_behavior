@@ -23,6 +23,8 @@
         %li
           = link_to "Consultant Services", consultant_services_path
         %li
+          = link_to "Select Clients", select_clients_path
+        %li
           = link_to "About Me", about_path
       = form_tag '/search_results', :method => :get, id: 'search_bar', class: 'navbar-form navbar-right' do
         = text_field_tag :search, nil, placeholder: 'Search Keywords in Documents', class: 'form-control', style: "width: 250px;"

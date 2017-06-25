@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  DEFAULT_PAGES = ['Topic Briefs', 'Projects', 'Publications', 'Consultant Services', 'About Me']
+  DEFAULT_PAGES = ['Topic Briefs', 'Projects', 'Publications', 'Consultant Services', 'Select Clients', 'About Me']
 
   extend FriendlyId
   friendly_id :title, use: :slugged
