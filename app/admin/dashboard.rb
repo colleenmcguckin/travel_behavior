@@ -11,6 +11,19 @@ ActiveAdmin.register_page "Dashboard" do
 
     columns do
       column do
+        panel 'Managing the Front Page Updates' do
+          ol do
+            li "Go to the Updates panel to see all updates."
+            li "Add a new update by filling in the form."
+            li "To add an image to an update, copy the image address and paste it into the image url field."
+            li "To make an update show up on the home page, give it a published at date. After that date and time pass it will show up on the site. To show up immediately, use a date in the past. This date determines the order for the updates on the home page."
+            li "To remove an update from the home page, check the 'Hide' box and it will be removed."
+          end
+        end
+      end
+    end
+    columns do
+      column do
         panel 'Uploading PDFs' do
           ol do
             li "Go to the Documents panel and click the 'New Document' button."
@@ -21,46 +34,6 @@ ActiveAdmin.register_page "Dashboard" do
           end
         end
       end
-      column do
-        panel 'Uploading Images' do
-          ol do
-            li "Go to the Images panel and click the 'New Image' button."
-            li "Enter a title."
-            li "Enter a description. This should describe the image to someone visually impaired."
-            li 'Select the image file to upload. Ensure you are uploading PDFs only.'
-            li "Click the 'Create Image' button."
-            li "The images you upload will be available to use when editing pages."
-          end
-        end
-      end
-    end
-    columns do
-      column do
-        panel 'Editing Pages' do
-          ol do
-            li "Log in as an admin."
-            li "Navigate to the page you want to edit."
-            li "Click the 'Edit' button."
-            li 'Edit the page as desired using the inline editor.'
-            li "Click the 'Save' button."
-            li "The edits will be saved."
-          end
-        end
-      end
-      column do
-        panel 'Linking to Documents' do
-          ol do
-            li "Log in as an admin."
-            li "Navigate to the page you want to edit."
-            li "Click the 'Edit' button."
-            li "Using the inline editor, type the '@' symbol. Begin typing the name of the document you want to link to."
-            li "Select a document title from the list."
-            li "The title will be inserted with a link to a PDF of the document."
-          end
-        end
-      end
-    end
-    columns do
       column do
         panel 'Managing Projects' do
           ol do
