@@ -26,7 +26,7 @@
                     %ul
                       - @topic_briefs.each do |topic_brief|
                         %li
-                          = link_to "#{topic_brief.title.titleize} - (#{topic_brief.heading&.titleize})", document_path(topic_brief, :format => 'pdf')
+                          = link_to "#{topic_brief.title.titleize}", document_path(topic_brief, :format => 'pdf')
                   - else
                     No results found
                 .col-md-3
@@ -62,7 +62,7 @@
                     %ul
                       - @power_points.each do |power_point|
                         %li
-                          = link_to "#{power_point.title.titleize} - (#{power_point.heading&.titleize})", document_path(power_point, :format => 'pdf')
+                          = link_to "#{power_point.title.titleize}", document_path(power_point, :format => 'pdf')
                   - else
                     No results found
                 .col-md-3
@@ -80,7 +80,7 @@
                     %ul
                       - @projects.each do |project|
                         %li
-                          = link_to "#{project.title.titleize} - (#{project.category&.titleize})", document_path(project, :format => 'pdf')
+                          = link_to "#{project.title.titleize}", document_path(project, :format => 'pdf')
                   - else
                     No results found
                 .col-md-3
