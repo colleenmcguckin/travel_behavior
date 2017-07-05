@@ -208,6 +208,11 @@
   	min-width: 0;
   	width: 100%;
   }
+  .btn-secondary:hover {
+    color: #ccc !important;
+    border: #ccc !important;
+  }
+
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
       color: #ecf0f1;
