@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: images
+#
+#  id          :integer          not null, primary key
+#  title       :string
+#  description :string
+#  public_id   :string
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 class Image < ActiveRecord::Base
 
   attr_accessor :path

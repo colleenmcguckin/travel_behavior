@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: pages
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  position   :integer
+#  content    :text
+#  slug       :string
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'test_helper'
 
 class PageTest < ActiveSupport::TestCase

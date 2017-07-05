@@ -184,7 +184,30 @@
   .navbar-default .navbar-link:hover {
     color: #707476;
   }
+  .flex-row {
+  	display: flex;
+  	flex-wrap: wrap;
+  }
+  .flex-row > [class*='col-'] {
+  	display: flex;
+  	flex-direction: column;
+  }
 
+  .flex-row .thumbnail,
+  .flex-row .caption {
+  	flex-direction: column;
+  	display: flex;
+  	flex: 1 0 auto;
+  	height: auto;
+  	position: relative;
+  }
+  .flex-text {
+  	flex-grow: 1;
+  }
+  .flex-row img {
+  	min-width: 0;
+  	width: 100%;
+  }
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
       color: #ecf0f1;

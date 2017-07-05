@@ -15,6 +15,7 @@ gem 'hamlit'
 # gem 'turbolinks', '~> 5'
 
 gem 'jbuilder', '~> 2.5'
+gem "just-datetime-picker"
 
 gem 'devise'
 gem 'mail_form'
@@ -41,6 +42,7 @@ group :production do
 end
 
 group :development do
+  gem 'annotate'
   gem 'best_errors'
   gem 'quiet_assets'
   gem 'rails-erd'

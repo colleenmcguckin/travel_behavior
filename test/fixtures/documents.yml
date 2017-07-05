@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: documents
+#
+#  id               :integer          not null, primary key
+#  heading          :string
+#  content          :text
+#  summary          :text
+#  category         :string
+#  publication_date :date
+#  title            :string
+#  pdf_id           :string
+#  pdf_filename     :string
+#  pdf_size         :integer
+#  pdf_content_type :string
+#  created_at       :datetime
+#  updated_at       :datetime
+#
+
 basic:
   title: People walking
   category: Publications

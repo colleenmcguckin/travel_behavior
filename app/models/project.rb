@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: projects
+#
+#  id               :integer          not null, primary key
+#  title            :string
+#  description      :text
+#  category         :string
+#  publication_date :date
+#  link             :string
+#  link_text        :string
+#  created_at       :datetime
+#  updated_at       :datetime
+#
+
 class Project < ActiveRecord::Base
 
   CATEGORIES = ['National', 'Airport and Rail/Long-Distance', 'Travel Demand Trends', 'Sustainability, Health and Safety', 'Regional Master Plan', 'Other']

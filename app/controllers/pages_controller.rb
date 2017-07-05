@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   before_action :load_new_contact_form
 
   def home
+    @updates = Update.homepage
   end
 
   def consultant_services

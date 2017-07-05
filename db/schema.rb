@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170101220439) do
+ActiveRecord::Schema.define(version: 20170705022537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -112,6 +112,9 @@ ActiveRecord::Schema.define(version: 20170101220439) do
     t.string   "link_text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "published_at"
+    t.boolean  "hide",         default: false
+    t.string   "image_url"
   end
 
 end

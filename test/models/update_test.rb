@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: updates
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  content    :text
+#  link       :string
+#  link_text  :string
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'test_helper'
 
 class UpdateTest < ActiveSupport::TestCase

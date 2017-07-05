@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: updates
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  content    :text
+#  link       :string
+#  link_text  :string
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 basic:
   title: The news update
   content: some really interesting facts about things going on today
