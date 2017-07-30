@@ -2,6 +2,11 @@ ActiveAdmin.register Update do
 
   permit_params :title, :content, :link, :link_text, :published_at, :hide, :image_url
 
+  scope :all
+  scope :published
+  scope :unpublished
+  scope ("Hidden") { |scope| scope.where(hide: true)}
+
   form do |f|
     f.inputs do
       input :image_url, hint: 'The url of the image you want to display. ex: https://photos.com/happy-people.jpg'
