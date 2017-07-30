@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705024057) do
+ActiveRecord::Schema.define(version: 20170730221908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20170705024057) do
     t.string   "pdf_content_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "heading_position"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -103,6 +104,7 @@ ActiveRecord::Schema.define(version: 20170705024057) do
     t.string   "link_text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_position"
   end
 
   create_table "updates", force: :cascade do |t|
