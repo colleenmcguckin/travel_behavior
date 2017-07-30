@@ -17,7 +17,7 @@
             .panel-heading
               %h3.panel-title
                 %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#topic_briefs"}
-                  Topic Briefs
+                  Topic Briefs (#{@topic_briefs.count})
             .panel-collapse.collapse{:id => "topic_briefs"}
               .panel-body{style: 'color: black;'}
                 .row
@@ -35,7 +35,7 @@
             .panel-heading
               %h3.panel-title
                 %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#publications"}
-                  Publications
+                  Publications (#{@publications.count})
             .panel-collapse.collapse{:id => "publications"}
               .panel-body{style: 'color: black;'}
                 .row
@@ -53,7 +53,7 @@
             .panel-heading
               %h3.panel-title
                 %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#power_points"}
-                  Presentations
+                  Presentations (#{@power_points.count})
             .panel-collapse.collapse{:id => "power_points"}
               .panel-body{style: 'color: black;'}
                 .row
@@ -71,7 +71,7 @@
             .panel-heading
               %h3.panel-title
                 %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#projects"}
-                  Projects
+                  Projects (#{@projects.count})
             .panel-collapse.collapse{:id => "projects"}
               .panel-body{style: 'color: black;'}
                 .row
