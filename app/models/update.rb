@@ -12,6 +12,7 @@
 #
 
 class Update < ActiveRecord::Base
+  default_scope { order(published_at: :desc) }
 
   validates :title, presence: {message: 'Title the news update.'}, on: :create
   validates :content, presence: {message: 'Content could not be saved.'}, on: :create

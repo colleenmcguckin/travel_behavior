@@ -14,6 +14,7 @@
 #
 
 class Project < ActiveRecord::Base
+  default_scope { order(publication_date: :desc) }
 
   CATEGORIES = ['National', 'Airport and Rail/Long-Distance', 'Travel Demand Trends', 'Sustainability, Health and Safety', 'Regional Master Plan', 'Other']
 
