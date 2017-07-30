@@ -1,6 +1,6 @@
 ActiveAdmin.register Document do
 
-  permit_params :title, :category, :pdf, :publication_date
+  permit_params :title, :category, :pdf, :publication_date, :heading, :heading_position
 
   show do
     attributes_table do
@@ -9,6 +9,7 @@ ActiveAdmin.register Document do
       end
       row :title
       row :heading
+      row :heading_position
       row('Category') { |doc| doc.category.titleize }
     end
   end
@@ -16,6 +17,7 @@ ActiveAdmin.register Document do
   form do |f|
     inputs 'Document' do
       f.input :heading, hint: 'If this is a topic brief or power point, enter the heading it should appear under.'
+      f.input :heading_position, hint: 'This number should be the same for all documents with this heading.'
       f.input :title
       f.input :category, as: :select, collection: Document::CATEGORIES
       f.input :publication_date

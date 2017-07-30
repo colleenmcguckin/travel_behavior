@@ -17,11 +17,15 @@ class PagesController < ApplicationController
 
   def publications
     @publications = Document.where(category: 'publications')
+    @publication_headings = @publications.reorder(:heading_position).pluck(:heading, :heading_position).uniq.reject { |h| h[1].nil? }.map { |e| e[0] }
+
     @power_points = Document.where(category: 'power_points')
+    @power_point_headings = @power_points.reorder(:heading_position).pluck(:heading, :heading_position).uniq.reject { |h| h[1].nil? }.map { |e| e[0] }
   end
 
   def topic_briefs
     @topic_briefs = Document.where(category: 'topic_briefs')
+    @topic_brief_headings = @topic_briefs.reorder(:heading_position).pluck(:heading, :heading_position).uniq.reject { |h| h[1].nil? }.map { |e| e[0] }
   end
 
   def select_clients

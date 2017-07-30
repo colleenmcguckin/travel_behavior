@@ -16,7 +16,7 @@
       .row
         .col-xs-10.col-xs-offset-1
           #accordion.panel-group
-            - @power_points.pluck(:heading).uniq.each_with_index do |heading, index|
+            - @power_point_headings.each_with_index do |heading, index|
               .panel.panel-default
                 .panel-heading
                   %h4.panel-title
@@ -36,17 +36,18 @@
     .row
       .col-xs-10.col-xs-offset-1
         #accordion.panel-group
-          - @publications.each_with_index do |publication, index|
+          - @publication_headings.each_with_index do |heading, index|
             .panel.panel-default
               .panel-heading
                 %h4.panel-title
                   %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#category_#{index}"}
-                    = publication.title
+                    = heading.titleize
               .panel-collapse.collapse{:id => "category_#{index}"}
-                .panel-body{style: 'color: black;'}
-                  = publication.summary
-                .panel-footer
-                  = link_to "#{publication.title}", document_path(publication, :format => 'pdf')
+                %ul
+                  - @publications.where(heading: heading).each do |publication|
+                    %li{style: 'color: black;'}
+                      = link_to "#{publication.title}", document_path(publication, :format => 'pdf')
+
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center
