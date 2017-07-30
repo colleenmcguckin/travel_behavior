@@ -24,14 +24,8 @@
                     - @topic_briefs.where(heading: heading).each do |topic_brief|
                       %li
                         = link_to "#{topic_brief.title.titleize}", document_path(topic_brief, :format => 'pdf')
-    %br
-    %hr.featurette-divider
-    .row
-      .container{style: 'width: 70%;'}
-        .text-xs-center
-          %h3{style: 'color: black;'}
-            Let's Work Together!
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center
           = render partial: 'contact_modal'
+        %br
