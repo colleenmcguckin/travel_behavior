@@ -19,7 +19,7 @@
                   %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#heading_#{index}"}
                     = heading.titleize
               .panel-collapse.collapse{:id => "heading_#{index}"}
-                .panel-body.text-center
+                .panel-body
                   %ul
                     - @topic_briefs.where(heading: heading).each do |topic_brief|
                       %li
