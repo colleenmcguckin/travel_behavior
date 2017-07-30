@@ -13,6 +13,7 @@ class PagesController < ApplicationController
 
   def projects
     @projects = Project.all
+    @project_headings = @projects.reorder(:category_position).pluck(:category, :category_position).uniq.reject { |h| h[1].nil? }.map { |e| e[0] }
   end
 
   def publications
