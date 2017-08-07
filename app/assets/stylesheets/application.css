@@ -19,43 +19,10 @@
   @-o-viewport        { width: device-width; }
   @viewport           { width: device-width; }
 
- .mentions-input {
-     position: relative;
- }
 
- .mentions-input .input {
-     overflow: hidden;
-     position: relative;
- }
-
- .mentions-input .highlighter {
-     position: absolute;
-     left: 0;
-     right: 0;
-     color: transparent;
-     overflow: hidden;
-     border-style: solid;
-     border-color: transparent;
- }
-
- .mentions-input .highlighter-content {
-     position: relative;
- }
-
- .mentions-input .highlighter-content strong {
-   font-weight: inherit;
-   background-color: #a3bcea;
-   display: inline;
-   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
- }
-
- [data-mention] {
-   background-color: #a3bcea;
-   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
- }
- .c-select {
+  .c-select {
      border: 2px solid #ccc;
- }
+  }
 
   .page-container {
     width: 100%;
