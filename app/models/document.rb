@@ -377,310 +377,222 @@ class Document < ActiveRecord::Base
 
     Document.create(
       publication_date: Date.today,
-      heading: 'Travel Behavior and the Environment',
-      title: "Sustainable Community Performance Measures",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Travel Behavior and the Environment',
-      title: "Green Behavior - The Carbon Impact of Daily Travel",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Travel Behavior and the Environment',
-      title: "The Carbon Footprint of Daily Travel - Article",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Travel Behavior and the Environment',
-      title: "Sustainable Mobility - New Findings from the NHTS",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Travel Behavior and the Environment',
-      title: "New Perspectives on Travel Demand",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
       heading: 'Demographics and Travel',
-      title: "Millenials & Mobility",
-      category: "power_points"
+      title: "Evolving Travel Behavior: Our Multi-modal Connected Future",
+      category: "power_points",
+      heading_position: 0
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 1.day,
       heading: 'Demographics and Travel',
-      title: "Sandwich Generation",
-      category: "power_points"
+      title: "Emerging Trends in US Vehicle Demand",
+      category: "power_points",
+      link_url: 'https://www.eia.gov/conference/2014/pdf/presentations/mcguckin.pdf',
+      heading_position: 0
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 2.days,
       heading: 'Demographics and Travel',
-      title: "Mode Equity - Current Findings",
-      category: "power_points"
+      title: "Young People’s Changing Impact on Travel Demand",
+      category: "power_points",
+      heading_position: 0
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 3.days,
       heading: 'Demographics and Travel',
-      title: "Summary of Travel Trends 1969-2009",
-      category: "power_points"
+      title: "The Impact of Shifting Demographics on Travel Demand",
+      category: "power_points",
+      heading_position: 0
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Demographics and Travel',
-      title: "Demographics Matter",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 4.days,
       heading: 'Demographics and Travel',
       title: "Age, Race, and Sex in Travel Behavior",
-      category: "power_points"
+      category: "power_points",
+      heading_position: 0
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 5.days,
       heading: 'Demographics and Travel',
-      title: "Work, Automobility, and Commuting: Differences by Race and Ethnic Backgrounds",
-      category: "power_points"
+      title: "Trends in Older American's Travel",
+      category: "power_points",
+      heading_position: 0
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 6.days,
       heading: 'Demographics and Travel',
-      title: "Does Race and Ethnicity Make a Difference in Travel Behavior?",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Demographics and Travel',
-      title: "Mobility in American Life",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Demographics and Travel',
-      title: "Usual Versus Actual Means of Commuting",
-      category: "power_points"
+      title: "Driving Miss Daisy: Women as Passengers",
+      category: "power_points",
+      heading_position: 0
     )
 
     Document.create(
       publication_date: Date.today,
       heading: 'Peak Travel and the Journey to Work',
       title: "Peak Travel in America",
-      category: "power_points"
+      category: "power_points",
+      heading_position: 1
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 1.day,
       heading: 'Peak Travel and the Journey to Work',
-      title: "Peak Travel in Selected Metros",
-      category: "power_points"
+      title: "A Walk Through Time: the Changing Landscape of Daily Travel",
+      category: "power_points",
+      heading_position: 1
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 2.days,
       heading: 'Peak Travel and the Journey to Work',
       title: "Understanding Trip Chaining - The 'Starbuck's Effect'",
-      category: "power_points"
+      category: "power_points",
+      heading_position: 1
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 3.days,
       heading: 'Peak Travel and the Journey to Work',
-      title: "A Walk Through Time - Changes in the Landscape of US Commuting",
-      category: "power_points"
+      title: "Sprawl of Workers and Jobs",
+      category: "power_points",
+      heading_position: 1
     )
 
     Document.create(
       publication_date: Date.today,
-      heading: 'Peak Travel and the Journey to Work',
-      title: "Differences in Trip Chaining Behavior between Men and Women",
-      category: "power_points"
+      heading: 'Long Distance Travel',
+      title: "Interregional Travel: New Perspectives for Policy Making",
+      category: "power_points",
+      heading_position: 2
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Employment Data and Commercial Travel',
-      title: "Employment Data: Uses, Sources, and Challenges",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Employment Data and Commercial Travel',
-      title: "Intermodal Truck Traffic: Description and Results of a Survey in Chicago",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Employment Data and Commercial Travel',
-      title: "Commercial Vehicle Survey Working Paper",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Active Travel & Health',
-      title: "Travel to School in California",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Active Travel & Health',
-      title: "Active Transportation Data for Decision Making",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Active Travel & Health',
-      title: "Biking in the US",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Active Travel & Health',
-      title: "Walking and Biking in California Summary of Findings",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Active Travel & Health',
-      title: "Walking is not Dead",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 1.day,
       heading: 'Long Distance Travel',
       title: "Intercity Travel Market Analysis",
-      category: "power_points"
+      category: "power_points",
+      heading_position: 2
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 2.days,
+      heading: 'Long Distance Travel',
+      title: "Long Distance Data",
+      category: "power_points",
+      heading_position: 2
+    )
+
+    Document.create(
+      publication_date: Date.today - 3.days,
       heading: 'Long Distance Travel',
       title: "Long Distance Travel Behavior - Challenges and Opportunities",
-      category: "power_points"
+      category: "power_points",
+      heading_position: 2
     )
 
     Document.create(
       publication_date: Date.today,
-      heading: 'Long Distance Travel',
-      title: "Long Distance Travel Behavior - Challenges and Opportunities",
-      category: "power_points"
+      heading: 'Active Travel and Sustainability',
+      title: "The Carbon Impact of Daily Travel",
+      category: "power_points",
+      heading_position: 3
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Long Distance Travel',
-      title: "Driving to Distractions: Long Distance Leisure Travel",
-      category: "power_points"
+      publication_date: Date.today - 1.day,
+      heading: 'Active Travel and Sustainability',
+      title: "Sustainable Mobility - New Findings from the NHTS",
+      category: "power_points",
+      heading_position: 3
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Long Distance Travel',
-      title: "Personal Travel - The Long and Short of It",
-      category: "power_points"
+      publication_date: Date.today - 2.days,
+      heading: 'Active Travel and Sustainability',
+      title: "Active Transportation Data for Decision Making",
+      category: "power_points",
+      heading_position: 3
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Travel by Older Americans',
-      title: "Trends in Older American's Travel",
-      category: "power_points"
+      publication_date: Date.today - 3.days,
+      heading: 'Active Travel and Sustainability',
+      title: "Active Travel in Texas",
+      category: "power_points",
+      heading_position: 3
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Travel by Older Americans',
-      title: "Driving Miss Daisy: Women as Passengers",
-      category: "power_points"
+      publication_date: Date.today - 4.days,
+      heading: 'Active Travel and Sustainability',
+      title: "Walking and Biking in California Summary of Findings",
+      category: "power_points",
+      heading_position: 3
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Travel by Older Americans',
-      title: "Working Retirement - An Update",
-      category: "topic_briefs"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Travel by Older Americans',
-      title: "Aging Cars, Aging Drivers ITE Journal",
-      category: "topic_briefs"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Survey Methods and Statistics',
-      title: "A Million Markets of One: New Directions for Household Travel Surveys",
-      category: "power_points"
+      publication_date: Date.today - 5.days,
+      heading: 'Active Travel and Sustainability',
+      title: "Trends in Walking",
+      category: "power_points",
+      heading_position: 3
     )
 
     Document.create(
       publication_date: Date.today,
       heading: 'Survey Methods and Statistics',
       title: "Trips, Chains and Tours - An Operational Definition",
-      category: "power_points"
+      category: "power_points",
+      heading_position: 4
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 1.day,
+      heading: 'Survey Methods and Statistics',
+      title: "Why Collect Employment Data",
+      category: "power_points",
+      heading_position: 4
+    )
+
+    Document.create(
+      publication_date: Date.today - 2.days,
       heading: 'Survey Methods and Statistics',
       title: "The Challenge of Surveying Hard-to-Reach Populations",
-      category: "power_points"
+      category: "power_points",
+      heading_position: 4
     )
 
+
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 3.days,
       heading: 'Survey Methods and Statistics',
-      title: "Hang-ups, Call-backs, and Incompletes: Non-Response in Telephone Surveys",
-      category: "power_points"
+      title: "The Challenge of Surveying Hard-to-Reach Populations",
+      category: "power_points",
+      heading_position: 4
     )
 
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Survey Methods and Statistics',
-      title: "Are Households with Interrupted Telephone Service Like Those with No Telephone Service?",
-      category: "power_points"
-    )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Survey Methods and Statistics',
-      title: "Exploring the Full continuum of Travel: Data Fusion by Recursive Partitioning Regression",
-      category: "power_points"
-    )
-
-    Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 4.days,
       heading: 'Survey Methods and Statistics',
       title: "Trip Generation Discussion Working Paper",
-      category: "power_points"
+      category: "power_points",
+      heading_position: 4
     )
+
+    Document.create(
+      publication_date: Date.today,
+      heading: 'Special Topics',
+      title: "Recent Changes and Future Directions in Travel Behavior",
+      category: "power_points",
+      heading_position: 5
+    )
+
   end
 end
