@@ -1,12 +1,13 @@
 ActiveAdmin.register Document do
 
-  permit_params :title, :category, :pdf, :publication_date, :heading, :heading_position
+  permit_params :title, :category, :pdf, :publication_date, :heading, :heading_position, :link_url
 
   show do
     attributes_table do
       row('PDF') do |doc|
         link_to doc.title, document_path(doc, format: :pdf), target: '_blank'
       end
+      row :link_url
       row :title
       row :heading
       row :heading_position
@@ -22,6 +23,7 @@ ActiveAdmin.register Document do
       f.input :category, as: :select, collection: Document::CATEGORIES
       f.input :publication_date
       f.input :pdf, as: :file
+      f.input :link_url, hint: 'Only upload a pdf OR insert a link here, not both!'
     end
     f.actions
   end
@@ -50,7 +52,7 @@ ActiveAdmin.register Document do
     private
 
     def document_params
-      params.require(:document).permit :title, :category, :pdf, :publication_date, :content
+      params.require(:document).permit :title, :category, :pdf, :publication_date, :content, :link_url
     end
 
   end

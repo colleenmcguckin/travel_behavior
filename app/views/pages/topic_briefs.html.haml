@@ -23,7 +23,11 @@
                   %ul
                     - @topic_briefs.where(heading: heading).each do |topic_brief|
                       %li
-                        = link_to "#{topic_brief.title.titleize}", document_path(topic_brief, :format => 'pdf')
+                        - if topic_brief.pdf.present?
+                          = link_to "#{topic_brief.title.titleize}", document_path(topic_brief, :format => 'pdf')
+                        - else
+                          = link_to "#{topic_brief.title.titleize}", "#{topic_brief.link_url}")
+
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center
