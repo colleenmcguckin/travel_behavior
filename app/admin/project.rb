@@ -12,6 +12,7 @@ ActiveAdmin.register Project do
       f.input :link, hint: 'Enter the url link to the project media, if any.'
       f.input :link_text, hint: 'Enter the text for the link, otherwise the naked url will be used.'
     end
+    f.actions
   end
 
 end
