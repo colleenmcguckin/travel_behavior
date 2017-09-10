@@ -46,7 +46,7 @@
                 .caption
                   %h3
                     - if update.link
-                      = link_to update.title, update.link
+                      = link_to update.title, update.link, target: :blank
                     - else
                       = update.title
                   %p.flex-text
