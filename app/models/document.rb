@@ -124,135 +124,253 @@ class Document < ActiveRecord::Base
 
     Document.create(
       publication_date: Date.today,
-      heading: 'Active Travel',
-      title: "A Comparison of Recalled and Reported Walk Trips",
-      category: "topic_briefs"
+      heading: 'Demographics and Travel',
+      title: "Impact of Baby Boomers on U.S. Travel",
+      category: "topic_briefs",
+      heading_position: 0,
+      link_url: "http://www.aarp.org/ppi/issues/livable-communities/info-2015/impact-of-baby-boomers-on-us-travel-1969-2009-AARP-ppi-liv-com.html"
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Active Travel',
-      title: "Measuring Trends in Walking",
-      category: "topic_briefs"
+      publication_date: Date.today - 1.day,
+      heading: 'Demographics and Travel',
+      title: "Travel Characteristics of New Immigrants",
+      category: "topic_briefs",
+      heading_position: 0
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Travel to School',
-      title: "Travel to School in California",
-      category: "topic_briefs"
+      publication_date: Date.today - 2.days,
+      heading: 'Demographics and Travel',
+      title: "Mobility and the Melting Pot",
+      category: "topic_briefs",
+      heading_position: 0
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Travel to School',
-      title: "Travel to School in LA County",
-      category: "topic_briefs"
+      publication_date: Date.today - 3.days,
+      heading: 'Demographics and Travel',
+      title: "Mobility in American Life",
+      category: "topic_briefs",
+      heading_position: 0
     )
 
     Document.create(
-      publication_date: Date.today,
+      publication_date: Date.today - 4.days,
+      heading: 'Demographics and Travel',
+      title: "Sandwich Generation",
+      category: "topic_briefs",
+      heading_position: 0
+    )
+
+    Document.create(
+      publication_date: Date.today - 5.days,
+      heading: 'Demographics and Travel',
+      title: "Working Retirement: An Update",
+      category: "topic_briefs",
+      heading_position: 0,
+      link_url: "http://www.aarp.org/content/aarp/en/home/research/ppi/liv-com2/policy/transportation/articles/work-related-travel-in-an-era-of-extended-employment-AARP-ppi-liv-com.html"
+    )
+
+    Document.create(
+      publication_date: Date.today - 6.days,
+      heading: 'Demographics and Travel',
+      title: "Aging Cars, Aging Drivers",
+      category: "topic_briefs",
+      heading_position: 0
+    )
+
+    Document.create(
+      publication_date: Date.today - 7.days,
       heading: 'Demographics and Travel',
       title: "Caregiving Travel",
-      category: "topic_briefs"
+      category: "topic_briefs",
+      heading_position: 0
     )
 
     Document.create(
       publication_date: Date.today,
-      heading: 'Demographics and Travel',
-      title: "Travel Trends of the Baby Boom Generation",
-      category: "topic_briefs"
+      heading: 'Peak Travel and the Journey to Work',
+      title: "Usual versus Actual Means of Commuting",
+      category: "topic_briefs",
+      heading_position: 1
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Demographics and Travel',
+      publication_date: Date.today - 1.day,
+      heading: 'Peak Travel and the Journey to Work',
       title: "Mandatory Peak Travel",
-      category: "topic_briefs"
+      category: "topic_briefs",
+      heading_position: 1
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Commute and Highway Travel',
-      title: "Trends in VMT",
-      category: "topic_briefs"
+      publication_date: Date.today - 2.days,
+      heading: 'Peak Travel and the Journey to Work',
+      title: "Congestion",
+      category: "topic_briefs",
+      heading_position: 1
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Commute and Highway Travel',
-      title: "Mode Share",
-      category: "topic_briefs"
+      publication_date: Date.today - 3.days,
+      heading: 'Peak Travel and the Journey to Work',
+      title: "Peak Travel in Select Metro Areas",
+      category: "topic_briefs",
+      heading_position: 1
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Commute and Highway Travel',
-      title: "Tollway Use",
-      category: "topic_briefs"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Commute and Highway Travel',
-      title: "Trends in VMT",
-      category: "topic_briefs"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Commute and Highway Travel',
-      title: "Travel in LA County",
-      category: "topic_briefs"
-    )
-
-    Document.create(
-      publication_date: Date.today,
-      heading: 'Commute and Highway Travel',
+      publication_date: Date.today - 4.days,
+      heading: 'Peak Travel and the Journey to Work',
       title: "Auto Occupancy",
-      category: "topic_briefs"
+      category: "topic_briefs",
+      heading_position: 1
+    )
+
+    Document.create(
+      publication_date: Date.today - 5.days,
+      heading: 'Peak Travel and the Journey to Work',
+      title: "Tollway Use",
+      category: "topic_briefs",
+      heading_position: 1
+    )
+
+    Document.create(
+      publication_date: Date.today - 6.days,
+      heading: 'Peak Travel and the Journey to Work',
+      title: "Trends in VMT",
+      category: "topic_briefs",
+      heading_position: 1
+    )
+
+    Document.create(
+      publication_date: Date.today - 7.days,
+      heading: 'Peak Travel and the Journey to Work',
+      title: "Working at Home: The Quiet Revolution",
+      category: "topic_briefs",
+      heading_position: 1
+    )
+
+    Document.create(
+      publication_date: Date.today - 8.days,
+      heading: 'Peak Travel and the Journey to Work',
+      title: "Pounding the Pavement Looking for Work",
+      category: "topic_briefs",
+      heading_position: 1
     )
 
     Document.create(
       publication_date: Date.today,
-      heading: 'Commute and Highway Travel',
-      title: "Peak Travel in Selected Metros",
-      category: "topic_briefs"
+      heading: 'Long Distance Travel',
+      title: "Homebodies and Road-Warriors",
+      category: "topic_briefs",
+      heading_position: 2
+    )
+
+    Document.create(
+      publication_date: Date.today - 1.day,
+      heading: 'Long Distance Travel',
+      title: "Long Distance Travel",
+      category: "topic_briefs",
+      heading_position: 2
+    )
+
+    Document.create(
+      publication_date: Date.today - 2.days,
+      heading: 'Long Distance Travel',
+      title: "Leisure Travel of People 50 and Older",
+      category: "topic_briefs",
+      heading_position: 2,
+      link_url: " http://www.aarp.org/content/aarp/en/home/research/ppi/liv-com2/policy/transportation/articles/leisure-travel-of-the-50-plus-AARP-ppi-liv-com.html"
     )
 
     Document.create(
       publication_date: Date.today,
-      heading: 'Livability / Transit',
-      title: "Walkable Communities",
-      category: "topic_briefs"
+      heading: 'Transit and Emerging Modes',
+      title: "Mode Share",
+      category: "topic_briefs",
+      heading_position: 3
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Livability / Transit',
+      publication_date: Date.today - 1.day,
+      heading: 'Transit and Emerging Modes',
       title: "Transit Ridership Trends",
-      category: "topic_briefs"
+      category: "topic_briefs",
+      heading_position: 3
     )
 
     Document.create(
       publication_date: Date.today,
-      heading: 'Special Topic Areas',
-      title: "Homebodies and Road Warriors",
-      category: "topic_briefs"
+      heading: 'Active Travel and Health',
+      title: "Walkable Communities",
+      category: "topic_briefs",
+      heading_position: 4
     )
 
     Document.create(
-      publication_date: Date.today,
-      heading: 'Special Topic Areas',
+      publication_date: Date.today - 1.day,
+      heading: 'Active Travel and Health',
       title: "Short Trips",
-      category: "topic_briefs"
+      category: "topic_briefs",
+      heading_position: 4
+    )
+
+    Document.create(
+      publication_date: Date.today - 2.days,
+      heading: 'Active Travel and Health',
+      title: "Measuring Trends in Walking",
+      category: "topic_briefs",
+      heading_position: 4
+    )
+
+    Document.create(
+      publication_date: Date.today - 3.days,
+      heading: 'Active Travel and Health',
+      title: "A Comparison of Recalled and Reported Walk Trips",
+      category: "topic_briefs",
+      heading_position: 4
+    )
+
+    Document.create(
+      publication_date: Date.today - 4.days,
+      heading: 'Active Travel and Health',
+      title: "Travel to School",
+      category: "topic_briefs",
+      heading_position: 4
+    )
+
+    Document.create(
+      publication_date: Date.today - 5.days,
+      heading: 'Active Travel and Health',
+      title: "Performance Measurement for Active Travel",
+      category: "topic_briefs",
+      heading_position: 4
     )
 
     Document.create(
       publication_date: Date.today,
       heading: 'Special Topic Areas',
-      title: "Pounding the Pavement Looking For Work",
-      category: "topic_briefs"
+      title: "The Carbon Footprint of Daily Travel",
+      category: "topic_briefs",
+      heading_position: 5
+    )
+
+    Document.create(
+      publication_date: Date.today - 1.day,
+      heading: 'Special Topic Areas',
+      title: "Energy Use and Fuel Efficiency",
+      category: "topic_briefs",
+      heading_position: 5
+    )
+
+    Document.create(
+      publication_date: Date.today - 2.days,
+      heading: 'Special Topic Areas',
+      title: "Rising Fuel Costs",
+      category: "topic_briefs",
+      heading_position: 5
     )
 
     #### POWER POINTS ####
