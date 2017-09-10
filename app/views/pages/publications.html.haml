@@ -46,10 +46,14 @@
                   %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#category_#{index}"}
                     = heading.titleize
               .panel-collapse.collapse{:id => "category_#{index}"}
-                %ul
-                  - @publications.where(heading: heading).each do |publication|
-                    %li{style: 'color: black;'}
-                      = link_to "#{publication.title}", document_path(publication, :format => 'pdf')
+                .panel-body
+                  %ul
+                    - @publications.where(heading: heading).each do |publication|
+                      %li
+                        - if publication.pdf.present?
+                          = link_to "#{publication.title}", document_path(publication, :format => 'pdf')
+                        - else
+                          = link_to "#{publication.title}", "#{publication.link_url}", target: :blank
 
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
