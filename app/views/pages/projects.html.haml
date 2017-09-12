@@ -23,7 +23,7 @@
                   %ul
                     - @projects.where(category: category).each do |project|
                       %li
-                        = link_to "#{project.title}", document_path(project, :format => 'pdf')
+                        = link_to "#{project.title}", "#{project.link}"
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center
