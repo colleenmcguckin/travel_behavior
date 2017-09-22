@@ -22,7 +22,7 @@
                 .panel-body
                   %ul
                     - @projects.where(category: category).each do |project|
-                      %li
+                      %li{style: 'color:black;'}
                         -# = link_to "#{project.title}", "#{project.link}"
                         = project.title
     .row
