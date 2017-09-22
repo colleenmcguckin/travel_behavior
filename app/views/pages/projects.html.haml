@@ -23,7 +23,8 @@
                   %ul
                     - @projects.where(category: category).each do |project|
                       %li
-                        = link_to "#{project.title}", "#{project.link}"
+                        -# = link_to "#{project.title}", "#{project.link}"
+                        = project.title
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center

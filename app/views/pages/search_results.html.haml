@@ -26,7 +26,10 @@
                     %ul
                       - @topic_briefs.each do |topic_brief|
                         %li
-                          = link_to "#{topic_brief.title.titleize} - (#{topic_brief.heading&.titleize})", document_path(topic_brief, :format => 'pdf')
+                          - if topic_brief.pdf.present?
+                            = link_to "#{topic_brief.title.titleize}", document_path(topic_brief, :format => 'pdf', target: :blank)
+                          - else
+                            = link_to "#{topic_brief.title.titleize}", "#{topic_brief.link_url}", target: :blank
                   - else
                     No results found
                 .col-md-3
@@ -44,7 +47,10 @@
                     %ul
                       - @publications.each do |publication|
                         %li
-                          = link_to "#{publication.title.titleize}", document_path(publication, :format => 'pdf')
+                          - if publication.pdf.present?
+                            = link_to "#{publication.title}", document_path(publication, :format => 'pdf', target: :blank)
+                          - else
+                            = link_to "#{publication.title}", "#{publication.link_url}", target: :blank
                   - else
                     No results found
                 .col-md-3
@@ -62,7 +68,10 @@
                     %ul
                       - @power_points.each do |power_point|
                         %li
-                          = link_to "#{power_point.title.titleize} - (#{power_point.heading&.titleize})", document_path(power_point, :format => 'pdf')
+                          - if power_point.pdf.present?
+                            = link_to "#{power_point.title}", document_path(power_point, :format => 'pdf', target: :blank)
+                          - else
+                            = link_to "#{power_point.title}", "#{power_point.link_url}", target: :blank
                   - else
                     No results found
                 .col-md-3
@@ -80,7 +89,8 @@
                     %ul
                       - @projects.each do |project|
                         %li
-                          = link_to "#{project.title.titleize} - (#{project.category&.titleize})", document_path(project, :format => 'pdf')
+                          -# = link_to "#{project.title.titleize} - (#{project.category&.titleize})", document_path(project, :format => 'pdf')
+                          = project.title
                   - else
                     No results found
                 .col-md-3
