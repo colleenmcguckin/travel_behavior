@@ -35,6 +35,7 @@ gem 'cloudinary'
 gem 'refile', require: 'refile/rails'
 gem 'refile-postgres'
 gem 'refile-s3'
+gem 'refile-mini_magick'
 gem 'pdf-reader'
 
 group :production do
