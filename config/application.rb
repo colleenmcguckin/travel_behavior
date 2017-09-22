@@ -18,6 +18,8 @@ module TravelBehavior
       config.each { |key, value| ENV[key.to_s] = value.to_s }
     end
 
+    config.active_record.schema_format = :sql
+
     # Load environment variables. config/env.yml contains defaults which are
     # suitable for development. (This file is optional).
     load_env_file
