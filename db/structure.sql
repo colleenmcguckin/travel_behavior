@@ -124,7 +124,7 @@ CREATE TABLE documents (
     title character varying,
     pdf_id character varying,
     pdf_filename character varying,
-    pdf_size integer,
+    pdf_size bigint,
     pdf_content_type character varying,
     created_at timestamp without time zone,
     updated_at timestamp without time zone,
@@ -621,4 +621,6 @@ INSERT INTO schema_migrations (version) VALUES ('20170730221908');
 INSERT INTO schema_migrations (version) VALUES ('20170910003239');
 
 INSERT INTO schema_migrations (version) VALUES ('20170922052637');
+
+INSERT INTO schema_migrations (version) VALUES ('20170922060931');
 
