@@ -28,7 +28,7 @@
                       - @power_points.where(heading: heading).each do |power_point|
                         %li
                           - if power_point.pdf.present?
-                            = link_to "#{power_point.title}", document_path(power_point, :format => 'pdf')
+                            = link_to "#{power_point.title}", document_path(power_point)
                           - else
                             = link_to "#{power_point.title}", "#{power_point.link_url}", target: :blank
     %br
