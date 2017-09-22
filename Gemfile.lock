@@ -197,6 +197,7 @@ GEM
       activemodel (>= 3.2, < 5.1)
     method_source (0.8.2)
     mime-types (2.99.3)
+    mini_magick (4.8.0)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     minitest-spec-rails (5.4.0)
@@ -287,6 +288,9 @@ GEM
       mime-types
       rest-client (~> 1.8)
       sinatra (~> 1.4.5)
+    refile-mini_magick (0.2.0)
+      mini_magick (~> 4.0)
+      refile (~> 0.5)
     refile-postgres (1.4.0)
       pg
       refile (~> 0.6.2)
@@ -386,6 +390,7 @@ DEPENDENCIES
   rails-erd
   rails_12factor
   refile
+  refile-mini_magick
   refile-postgres
   refile-s3
   sass-rails (~> 5.0)
