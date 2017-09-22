@@ -41,6 +41,18 @@ ActiveAdmin.register Document do
       end
     end
 
+    def update
+      @document = Document.find(params[:id])
+
+      content = PDF::Reader.new(document_params['pdf'].tempfile).pages.map{ |page| page.text }
+      if @document.update content: content
+
+        redirect_to admin_document_path @document
+      else
+        redirect_to admin_new_document_path
+      end
+    end
+
     # def destroy
     #   image = Image.find(params[:id])
     #   if image.destroy
