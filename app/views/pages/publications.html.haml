@@ -28,7 +28,7 @@
                       - @power_points.where(heading: heading).each do |power_point|
                         %li
                           - if power_point.pdf.present?
-                            = link_to "#{power_point.title}", document_path(power_point, :format => 'pdf', target: :blank)
+                            = link_to "#{power_point.title}", document_path(power_point, :format => 'pdf'), target: :blank
                           - else
                             = link_to "#{power_point.title}", "#{power_point.link_url}", target: :blank
     %br
@@ -51,7 +51,7 @@
                     - @publications.where(heading: heading).each do |publication|
                       %li
                         - if publication.pdf.present?
-                          = link_to "#{publication.title}", document_path(publication, :format => 'pdf', target: :blank)
+                          = link_to "#{publication.title}", document_path(publication, :format => 'pdf'), target: :blank
                         - else
                           = link_to "#{publication.title}", "#{publication.link_url}", target: :blank
 
