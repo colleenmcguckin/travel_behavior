@@ -44,7 +44,7 @@
                 - unless update.image_url.blank?
                   = image_tag(update.image_url)
                 .caption
-                  %h3
+                  %h4
                     - if update.link
                       = link_to update.title, update.link, target: :blank
                     - else
