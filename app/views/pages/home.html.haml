@@ -39,7 +39,7 @@
       .container{style: 'width: 90%;'}
         .flex-row.row
           - @updates.each do |update|
-            .col-sm-3.col-md-3.col-lg-3
+            .col-md-3.col-lg-3
               .thumbnail
                 - unless update.image_url.blank?
                   = image_tag(update.image_url)
