@@ -37,8 +37,8 @@
   }
 
   .panel-body li {
-    color: black;
-    list-style: square;
+    color: black !important;
+    list-style: square !important;
   }
 
   .btn-primary {
