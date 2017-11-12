@@ -7,12 +7,13 @@ ActiveAdmin.register Document do
     column :heading
     column :heading_position
     column :category
+    actions
   end
 
   show do
     attributes_table do
       row('PDF') do |doc|
-        link_to doc.title, document_path(doc, format: :pdf), target: '_blank'
+        link_to doc.title, document_path(doc, format: :pdf), target: '_blank' if doc.pdf.present?
       end
       row :link_url
       row :title
