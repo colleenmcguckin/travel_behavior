@@ -2,6 +2,13 @@ ActiveAdmin.register Document do
 
   permit_params :title, :category, :pdf, :publication_date, :heading, :heading_position, :link_url
 
+  index do
+    column :title
+    column :heading
+    column :heading_position
+    column :category
+  end
+
   show do
     attributes_table do
       row('PDF') do |doc|
