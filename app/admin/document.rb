@@ -32,9 +32,12 @@ ActiveAdmin.register Document do
     def create
       @document = Document.new document_params
 
-      content = PDF::Reader.new(document_params['pdf'].tempfile).pages.map{ |page| page.text }
-      if @document.update content: content
+      if document_params['pdf']
+        content = PDF::Reader.new(document_params['pdf'].tempfile).pages.map{ |page| page.text }
+        @document.update content: content
+      end
 
+      if @document.save
         redirect_to admin_document_path @document
       else
         redirect_to admin_new_document_path
@@ -44,9 +47,12 @@ ActiveAdmin.register Document do
     def update
       @document = Document.find(params[:id])
 
-      content = PDF::Reader.new(document_params['pdf'].tempfile).pages.map{ |page| page.text }
-      if @document.update content: content
+      if document_params['pdf']
+        content = PDF::Reader.new(document_params['pdf'].tempfile).pages.map{ |page| page.text }
+        @document.update content: content
+      end
 
+      if @document.save
         redirect_to admin_document_path @document
       else
         redirect_to admin_new_document_path
@@ -64,7 +70,7 @@ ActiveAdmin.register Document do
     private
 
     def document_params
-      params.require(:document).permit :title, :category, :pdf, :publication_date, :content, :link_url
+      params.require(:document).permit :title, :category, :pdf, :publication_date, :content, :link_url, :heading, :heading_position
     end
 
   end
