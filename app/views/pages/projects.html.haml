@@ -24,11 +24,11 @@
                     - @projects.where(heading: heading).each do |project|
                       %li
                         - if project.pdf.present?
-                          = link_to "#{project.title.titleize}", document_path(project, :format => 'pdf'), target: :blank
+                          = link_to "#{project.title}", document_path(project, :format => 'pdf'), target: :blank
                         - elsif project.link_url.present?
-                          = link_to "#{project.title.titleize}", "#{project.link_url}", target: :blank
+                          = link_to "#{project.title}", "#{project.link_url}", target: :blank
                         - else
-                          = project.title.titleize
+                          = project.title
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center

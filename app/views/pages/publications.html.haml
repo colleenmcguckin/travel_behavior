@@ -23,14 +23,16 @@
                     %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#heading_#{index}"}
                       = heading.titleize
                 .panel-collapse.collapse{:id => "heading_#{index}"}
-                  .panel-body
+                  .panel-body{style: 'color:black;'}
                     %ul
                       - @power_points.where(heading: heading).each do |power_point|
                         %li
                           - if power_point.pdf.present?
                             = link_to "#{power_point.title}", document_path(power_point, :format => 'pdf'), target: :blank
-                          - else
+                          - elsif power_point.link_url.present?
                             = link_to "#{power_point.title}", "#{power_point.link_url}", target: :blank
+                          - else
+                            = power_point.title
     %br
     %a{name: 'publications'}
     %h2.text-center
@@ -46,14 +48,16 @@
                   %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#category_#{index}"}
                     = heading.titleize
               .panel-collapse.collapse{:id => "category_#{index}"}
-                .panel-body
+                .panel-body{style: 'color:black;'}
                   %ul
                     - @publications.where(heading: heading).each do |publication|
                       %li
                         - if publication.pdf.present?
                           = link_to "#{publication.title}", document_path(publication, :format => 'pdf'), target: :blank
-                        - else
+                        - elsif publication.link_url.present?
                           = link_to "#{publication.title}", "#{publication.link_url}", target: :blank
+                        - else
+                          = link_to publication.title
 
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}

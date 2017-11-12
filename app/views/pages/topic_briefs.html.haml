@@ -19,16 +19,16 @@
                   %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#heading_#{index}"}
                     = heading.titleize
               .panel-collapse.collapse{:id => "heading_#{index}"}
-                .panel-body
+                .panel-body{style: 'color:black;'}
                   %ul
                     - @topic_briefs.where(heading: heading).each do |topic_brief|
                       %li
                         - if topic_brief.pdf.present?
-                          = link_to "#{topic_brief.title.titleize}", document_path(topic_brief, :format => 'pdf'), target: :blank
+                          = link_to "#{topic_brief.title}", document_path(topic_brief, :format => 'pdf'), target: :blank
                         - elsif topic_brief.link_url.present?
-                          = link_to "#{topic_brief.title.titleize}", "#{topic_brief.link_url}", target: :blank
+                          = link_to "#{topic_brief.title}", "#{topic_brief.link_url}", target: :blank
                         - else
-                          = topic_brief.title.titleize
+                          = topic_brief.title
 
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
