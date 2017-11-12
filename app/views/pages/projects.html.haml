@@ -22,13 +22,16 @@
                 .panel-body{style: 'color:black;'}
                   %ul
                     - @projects.where(heading: heading).each do |project|
-                      %li
+                      %li{style: 'font-weight:bold;'}
                         - if project.pdf.present?
                           = link_to "#{project.title}", document_path(project, :format => 'pdf'), target: :blank
                         - elsif project.link_url.present?
                           = link_to "#{project.title}", "#{project.link_url}", target: :blank
                         - else
                           = project.title
+                        - if project.summary.present?
+                          %p{style: 'font-weight:normal;'}= project.summary
+
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center
