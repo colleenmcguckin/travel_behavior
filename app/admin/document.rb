@@ -9,6 +9,7 @@ ActiveAdmin.register Document do
       end
       row :link_url
       row :title
+      row :summary
       row :heading
       row :heading_position
       row('Category') { |doc| doc.category.titleize }
@@ -20,6 +21,7 @@ ActiveAdmin.register Document do
       f.input :heading, hint: 'If this is a topic brief or power point, enter the heading it should appear under.'
       f.input :heading_position, hint: 'This number should be the same for all documents with this heading.'
       f.input :title
+      f.input :summary
       f.input :category, as: :select, collection: Document::CATEGORIES
       f.input :publication_date
       f.input :pdf, as: :file
@@ -70,7 +72,7 @@ ActiveAdmin.register Document do
     private
 
     def document_params
-      params.require(:document).permit :title, :category, :pdf, :publication_date, :content, :link_url, :heading, :heading_position
+      params.require(:document).permit :title, :category, :pdf, :publication_date, :content, :summary, :link_url, :heading, :heading_position
     end
 
   end
