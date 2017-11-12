@@ -12,19 +12,23 @@
     .row
       .col-xs-10.col-xs-offset-1
         #accordion.panel-group
-          - @project_headings.each_with_index do |category, index|
+          - @projects.pluck(:heading).uniq.each_with_index do |heading, index|
             .panel.panel-default
               .panel-heading
                 %h4.panel-title
-                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#category_#{index}"}
-                    = category.titleize
-              .panel-collapse.collapse{:id => "category_#{index}"}
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#heading_#{index}"}
+                    = heading.titleize
+              .panel-collapse.collapse{:id => "heading_#{index}"}
                 .panel-body
                   %ul
-                    - @projects.where(category: category).each do |project|
-                      %li{style: 'color:black;'}
-                        -# = link_to "#{project.title}", "#{project.link}"
-                        = project.title
+                    - @projects.where(heading: heading).each do |project|
+                      %li
+                        - if project.pdf.present?
+                          = link_to "#{project.title.titleize}", document_path(project, :format => 'pdf'), target: :blank
+                        - elsif project.link_url.present?
+                          = link_to "#{project.title.titleize}", "#{project.link_url}", target: :blank
+                        - else
+                          = project.title.titleize
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}
         .text-xs-center

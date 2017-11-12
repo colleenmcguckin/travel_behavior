@@ -25,8 +25,10 @@
                       %li
                         - if topic_brief.pdf.present?
                           = link_to "#{topic_brief.title.titleize}", document_path(topic_brief, :format => 'pdf'), target: :blank
-                        - else
+                        - elsif topic_brief.link_url.present?
                           = link_to "#{topic_brief.title.titleize}", "#{topic_brief.link_url}", target: :blank
+                        - else
+                          = topic_brief.title.titleize
 
     .row
       .container{style: 'width: 70%; margin-bottom: 20px;'}

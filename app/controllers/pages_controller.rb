@@ -12,8 +12,8 @@ class PagesController < ApplicationController
   end
 
   def projects
-    @projects = Project.all
-    @project_headings = @projects.reorder(:category_position).pluck(:category, :category_position).uniq.reject { |h| h[1].nil? }.map { |e| e[0] }
+    @projects = Document.where(category: 'projects')
+    @project_headings = @projects.reorder(:heading_position).pluck(:heading, :heading_position).uniq.reject { |h| h[1].nil? }.map { |e| e[0] }
   end
 
   def publications

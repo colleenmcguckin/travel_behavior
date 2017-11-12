@@ -20,7 +20,7 @@
 class Document < ActiveRecord::Base
   default_scope { order(publication_date: :desc) }
 
-  CATEGORIES = %w[publications topic_briefs power_points]
+  CATEGORIES = %w[publications topic_briefs power_points projects]
 
   attachment :pdf
 
