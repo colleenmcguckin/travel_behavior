@@ -253,43 +253,6 @@ ALTER SEQUENCE pages_id_seq OWNED BY pages.id;
 
 
 --
--- Name: projects; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE projects (
-    id integer NOT NULL,
-    title character varying,
-    description text,
-    category character varying,
-    publication_date date,
-    link character varying,
-    link_text character varying,
-    created_at timestamp without time zone,
-    updated_at timestamp without time zone,
-    category_position integer
-);
-
-
---
--- Name: projects_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE projects_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: projects_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE projects_id_seq OWNED BY projects.id;
-
-
---
 -- Name: refile_attachments; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -408,13 +371,6 @@ ALTER TABLE ONLY pages ALTER COLUMN id SET DEFAULT nextval('pages_id_seq'::regcl
 
 
 --
--- Name: projects id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY projects ALTER COLUMN id SET DEFAULT nextval('projects_id_seq'::regclass);
-
-
---
 -- Name: refile_attachments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -474,14 +430,6 @@ ALTER TABLE ONLY images
 
 ALTER TABLE ONLY pages
     ADD CONSTRAINT pages_pkey PRIMARY KEY (id);
-
-
---
--- Name: projects projects_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY projects
-    ADD CONSTRAINT projects_pkey PRIMARY KEY (id);
 
 
 --
@@ -623,4 +571,6 @@ INSERT INTO schema_migrations (version) VALUES ('20170910003239');
 INSERT INTO schema_migrations (version) VALUES ('20170922052637');
 
 INSERT INTO schema_migrations (version) VALUES ('20170922060931');
+
+INSERT INTO schema_migrations (version) VALUES ('20171112200504');
 
