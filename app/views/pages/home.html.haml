@@ -26,7 +26,7 @@
         .text-xs-center
           = link_to 'Topic Briefs', topic_briefs_path, class: 'btn btn-lg btn-secondary'
           = link_to 'Presentations', publications_path(anchor: 'power-points'), class: 'btn btn-lg btn-secondary'
-          = link_to 'Publications', publications_path, class: 'btn btn-lg btn-secondary'
+          = link_to 'Publications', publications_path(anchor: 'publications'), class: 'btn btn-lg btn-secondary'
           = link_to 'Projects', projects_path, class: 'btn btn-lg btn-secondary'
           = render partial: 'contact_modal'
     %hr.featurette-divider
