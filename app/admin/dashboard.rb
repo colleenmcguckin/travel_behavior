@@ -3,14 +3,14 @@ ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
   content title: proc{ I18n.t("active_admin.dashboard") } do
-    panel 'Welcome' do
-      h4 'Greetings Earthling'
-
-      span 'This is your mission control. Use the resources above to manage your site.'
-    end
 
     columns do
       column do
+        panel 'Greetings Earthling' do
+          h1 'Welcome'
+
+          h4 'This is your mission control. Use the resources above to manage your site.'
+        end
         panel 'Managing the Front Page Updates' do
           ol do
             li "Go to the Updates panel to see all updates."
@@ -21,27 +21,18 @@ ActiveAdmin.register_page "Dashboard" do
           end
         end
       end
-    end
-    columns do
       column do
-        panel 'Uploading PDFs' do
+        panel 'Managing Documents (Topic Briefs, Power Points, Projects, and Publications)' do
           ol do
-            li "Go to the Documents panel and click the 'New Document' button."
-            li "Enter a title."
+            li "Go to the Documents panel and click the 'New Document' button, or select 'edit' for an existing document."
+            li "Enter or edit the heading for the document to display beneath. This should be the exact same as another document with the same category's heading and have the same heading_position as well. OR You can enter a new heading, along with a new heading_position as well."
+            li "Enter or edit the title."
+            li "Enter or edit the summary. Summaries are only displayed for documents in the projects category. They can be stored for any type of document."
             li "Pick a document category. Topic Briefs will show up on the Topics Brief page and Publications will show up on the Publications page."
-            li 'Select the pdf file to upload. Ensure you are uploading PDFs only.'
-            li "Click the 'Create' button."
-          end
-        end
-      end
-      column do
-        panel 'Managing Projects' do
-          ol do
-            li "Log in as an admin."
-            li "Navigate to the admin project panel."
-            li "Create, edit or delete a project."
-            li "Click the 'Save' button."
-            li 'Projects will populate under their header category on the Projects page.'
+            li "Pick a publication date. The date determines the order of the documents within each heading. If you set a future date, the document will not be visible until that time."
+            li 'If there is a pdf attachment, select the pdf file to upload. Ensure you are uploading PDFs only. Do not enter a link into the link url field.'
+            li 'If there is a link, enter the url into the link url field. Do not select a pdf to attach.'
+            li "Click the 'Create' or 'Update' button."
           end
         end
       end
