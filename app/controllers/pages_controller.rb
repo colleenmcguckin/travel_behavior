@@ -33,12 +33,11 @@ class PagesController < ApplicationController
   end
 
   def search_results
-    search = params[:search]
-    @search_term = search
-    @power_points = Document.where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%").where(category: 'power_points')
-    @publications = Document.where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%").where(category: 'publications')
-    @topic_briefs = Document.where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%").where(category: 'topic_briefs')
-    @projects = Project.where('title ILIKE ? OR description ILIKE ?', "%#{search}%", "%#{search}%")
+    @search_term  = params[:search]
+    @power_points = Document.where(category: 'power_points').where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{@search_term}%", "%#{@search_term}%", "%#{@search_term}%")
+    @publications = Document.where(category: 'publications').where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{@search_term}%", "%#{@search_term}%", "%#{@search_term}%")
+    @topic_briefs = Document.where(category: 'topic_briefs').where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{@search_term}%", "%#{@search_term}%", "%#{@search_term}%")
+    @projects     = Document.where(category: 'projects').where('title ILIKE ? OR content ILIKE ? OR summary ILIKE ?', "%#{@search_term}%", "%#{@search_term}%", "%#{@search_term}%")
   end
 
   private
