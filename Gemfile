@@ -4,7 +4,7 @@ ruby "2.6.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.6'
 gem 'pg', '~> 0.20'
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 4.3'
 
 gem 'sass-rails', '~> 5.0'
 
