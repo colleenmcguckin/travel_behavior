@@ -7,14 +7,10 @@
         %h4.modal-title Contact Me
       .modal-body
         .row
-          = simple_form_for @contact_form, url: deliver_contact_form_path, html: { class: 'form-horizontal' } do |f|
-            .col-lg-8.col-lg-offset-2
-              =f.input :name, required: true, placeholder: 'Your Name'
-            .col-lg-8.col-lg-offset-2
-              =f.input :email, required: true, hint: "I'll email you back at this address.", placeholder: 'Your Email'
-            .col-lg-8.col-lg-offset-2
-              =f.input :message, as: :text, required: true
-            .col-lg-8.col-lg-offset-2
-              =f.button :submit, 'Submit'
+          %p Nancy McGuckin
+          %p Travel Behavior Analyst
+          %p 1214 Blair Ave, Suite #100
+          %p Pasadena, CA 91030
+          %p n_mcguckin@rocketmail.com
       .modal-footer
         %button.btn.btn-secondary.btn-sm{"data-dismiss" => "modal", :type => "button"} Close
