@@ -12,6 +12,7 @@
           %h5 1214 Blair Ave, Suite #100
           %h5 Pasadena, CA 91030
           %br
-          = mail_to ENV[MAIL_TO_ADDRESS]
+          %h5
+            = ENV[MAIL_TO_ADDRESS]
       .modal-footer
         %button.btn.btn-secondary.btn-sm{"data-dismiss" => "modal", :type => "button"} Close
